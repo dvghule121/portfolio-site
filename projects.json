@@ -29,6 +29,22 @@
             "img": "images/projects/yt-thumbnail.jpg",
             "desc": "youtube channel ",
             "link": "https://www.youtube.com/channel/UCp8wp_ZU0DiVvGt5KZd4nWg"
+            
+        },
+        {
+            "name": "Crazy Coder's",
+            "img": "images/Projects/cclogo.png",
+            "desc": ""
+        },
+        {
+            "name": "Desktop assist",
+            "img": "images/Projects/Your_image.png",
+            "desc": ""
+        },
+        {
+            "name": "DynoCodes",
+            "img": "images/Projects/yt-thumbnail.jpg",
+            "desc": ""
         }
     ]
 }
