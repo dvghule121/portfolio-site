@@ -3,27 +3,32 @@
        {
             "name": "Coders Library",
             "img": "https://blog.tcea.org/wp-content/uploads/2016/05/ipadreader-1.jpg",
-            "desc": "Libby is a free app where you can borrow ebooks, digital audiobooks, and magazines from your public library. You can stream titles with Wi-Fi or mobile data, or download them for offline use and read anytime, anywhere. All you need to get started is a library card."
+            "desc": "Libby is a free app where you can borrow ebooks, digital audiobooks, and magazines from your public library. You can stream titles with Wi-Fi or mobile data, or download them for offline use and read anytime, anywhere. All you need to get started is a library card.",
+            "link": "https://github.com/dvghule121/Coder-s-library"
         },
         {
             "name": "medico-assist",
             "img": "images/projects/dyno.jpg",
-            "desc": ""
+            "desc": "Simple disease prediction site based on symptoms \n Not for any practical purpose",
+            "link": "http://dyno-medicoassist.herokuapp.com/"
         },
         {
             "name": "Crazy Coder's",
             "img": "images/projects/cclogo.png",
-            "desc": ""
+            "desc": "Group of some  crazy peoples who got infinite level of creativity",
+            "link": ""
         },
         {
             "name": "Desktop assist",
             "img": "images/projects/Your_image.png",
-            "desc": ""
+            "desc": "Dyno is both text as well as voice assistant for doing basic things like opening diff apps, playing song, sending emails, greeting you and telling you time etc its just a demo.",
+            "link": "https://youtu.be/wQq-R4X8p2Q"
         },
         {
             "name": "DynoCodes",
             "img": "images/projects/yt-thumbnail.jpg",
-            "desc": ""
+            "desc": "youtube channel ",
+            "link": "https://www.youtube.com/channel/UCp8wp_ZU0DiVvGt5KZd4nWg"
         }
     ]
 }
