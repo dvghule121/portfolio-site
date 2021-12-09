@@ -19,23 +19,16 @@
     background-color: rgb(0, 0, 0);
     min-height: 100vh;
     max-width: 100vw;
-    background-image: url("images/5445736-fly-and-spin-through-space-less-stars-no-clouds-or-space-dust-transparent-stars-background-1920_1080_preview\ \(1\).png");
-    
-    
-    background-size: cover;
+    background-image: url("images/5445736-fly-and-spin-through-space-less-stars-no-clouds-or-space-dust-transparent-stars-background-1920_1080_preview\ \(1\).png");  
     padding: 2vw;
     display: flex;
-    justify-content: space-between;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     color: white;
     background-size: 100%;
     background-repeat: repeat-y;
-    
-    
-    
-
-  
+   
     
 }
 .intro-text h1{
@@ -46,10 +39,10 @@
     color: rgb(255, 255, 255);
     text-shadow: black 3px 5px;
 }
-/* 
+
 .intro-text h1 span {
     color: rgb(224, 33, 33);
-} */
+}
 
 .intro-text p  ,h3 {
     color: white;
@@ -82,14 +75,24 @@
    
 }
 .intro-page .left{
-    margin-right: 15vw;
+    
+    position: relative;
+    z-index: 1;
+    max-width: 80vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.intro-page .left .img {
+    width: 100%;
+    margin: 0;
 }
 
 
 .right{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     overflow-x: hidden;
 }
 
@@ -97,6 +100,8 @@
     
 min-width: 50vw;
 padding: 0;
+position: relative;
+z-index: 4;
 
        
 }
@@ -108,19 +113,22 @@ padding: 0;
     padding: 0;
     overflow: hidden;
    
-    
+}
 
+.about img{
+    width: 100%;
+    
 }
 .about .right{
    
-    justify-content: center;
-    
+    justify-content: center;   
     max-width: 45vw;
     max-height: 80vh;
     min-height: 80vh;
     padding: 4vw;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.493);
+    
     
 }
 .about .right h1{
@@ -131,7 +139,8 @@ padding: 0;
     max-width: 40vw;
     overflow: hidden;
     padding: 1.25vh;
-    font-family: "popins",Arial, Helvetica, sans-serif;
+    font-family:  "Fizzt Bubbles" ursive;
+    font-size: large;
     
 }
 
@@ -159,7 +168,7 @@ button{
     max-height: 50px
 
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 480px) {
     .intro-text h1{
         font-size: 10vw;
         
@@ -179,8 +188,7 @@ button{
         background-repeat: repeat-y;
         max-height: 100vh;
         max-width: 100vw;
-        display: flex;
-        
+        display: flex;       
         flex-wrap: wrap;
         
         
@@ -212,12 +220,17 @@ button{
     .about .left{
         position: relative;
         max-width: 90vw;
-        max-height: 80vh;
+        min-height: 80vh;
+
+        width: 100%;
+        height: 100%;
         margin: 5vh 0;
         z-index: 0;
         overflow: hidden;
         background-color: transparent;
     }
+
+    .about .left img{width: 100%;}
 
     .about .right{
         position: relative;
@@ -238,21 +251,19 @@ button{
     
 
     .card-view {
-        max-width: 80vw;
+        max-width: 90vw;
         overflow: hidden;
     }
 
-    .rounded-img{
-        max-width: 80vw;
-        
-        
+   
+    .rounded-img img{
+        width: 100%;
     }
     
     .intro-page .left{
         position: relative;
         z-index: 1;
         top: -10vh;
-        left: 5vw;
         max-width: 100vw;
         overflow: hidden;
         margin: 0;
@@ -291,7 +302,7 @@ button{
 
   /* The typing effect */
   @keyframes typing {
-    from { width: 100% }
+    from { width: 80% }
     to { width: 0 }
   }
   
