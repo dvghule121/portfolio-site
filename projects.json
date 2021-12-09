@@ -8,25 +8,25 @@
         },
         {
             "name": "medico-assist",
-            "img": "images/projects/dyno.jpg",
+            "img": "images/Projects/dyno.jpg",
             "desc": "Simple disease prediction site based on symptoms using artificial intelligence with Python programming language and tensorflow library  \n Not for any practical purpose",
             "link": "http://dyno-medicoassist.herokuapp.com/"
         },
         {
             "name": "Crazy Coder's",
-            "img": "images/projects/cclogo.png",
+            "img": "images/Projects/cclogo.png",
             "desc": "Group of some  crazy peoples who got infinite level of creativity",
             "link": ""
         },
         {
             "name": "Desktop assist",
-            "img": "images/projects/Your_image.png",
+            "img": "images/Projects/Your_image.png",
             "desc": "Dyno is both text as well as voice assistant for doing basic things like opening diff apps, playing song, sending emails, greeting you and telling you time etc its just a demo.",
             "link": "https://youtu.be/wQq-R4X8p2Q"
         },
         {
             "name": "DynoCodes",
-            "img": "images/projects/yt-thumbnail.jpg",
+            "img": "images/Projects/yt-thumbnail.jpg",
             "desc": "youtube channel ",
             "link": "https://www.youtube.com/channel/UCp8wp_ZU0DiVvGt5KZd4nWg"
             
