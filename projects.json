@@ -2,27 +2,27 @@
     "items": [
        {
             "name": "Coders Library",
-            "img": "",
+            "img": "https://blog.tcea.org/wp-content/uploads/2016/05/ipadreader-1.jpg",
             "desc": "Libby is a free app where you can borrow ebooks, digital audiobooks, and magazines from your public library. You can stream titles with Wi-Fi or mobile data, or download them for offline use and read anytime, anywhere. All you need to get started is a library card."
         },
         {
             "name": "medico-assist",
-            "img": "images/projects/dyno.jpg",
+            "img": "images/Projects/dyno.jpg",
             "desc": ""
         },
         {
             "name": "Crazy Coder's",
-            "img": "images/projects/cclogo.png",
+            "img": "images/Projects/cclogo.png",
             "desc": ""
         },
         {
             "name": "Desktop assist",
-            "img": "images/projects/Your_image.png",
+            "img": "images/Projects/Your_image.png",
             "desc": ""
         },
         {
             "name": "DynoCodes",
-            "img": "images/projects/yt-thumbnail.jpg",
+            "img": "images/Projects/yt-thumbnail.jpg",
             "desc": ""
         }
     ]
