@@ -1,0 +1,29 @@
+{
+    "items": [
+       {
+            "name": "Coders Library",
+            "img": "images/bg-no-string.png",
+            "desc": "Libby is a free app where you can borrow ebooks, digital audiobooks, and magazines from your public library. You can stream titles with Wi-Fi or mobile data, or download them for offline use and read anytime, anywhere. All you need to get started is a library card."
+        },
+        {
+            "name": "Coders Library",
+            "img": "images/bg-no-string.png",
+            "desc": ""
+        },
+        {
+            "name": "Coders Library",
+            "img": "images/bg-no-string.png",
+            "desc": ""
+        },
+        {
+            "name": "Coders Library",
+            "img": "images/bg-no-string.png",
+            "desc": ""
+        },
+        {
+            "name": "Coders Library",
+            "img": "images/bg-no-string.png",
+            "desc": ""
+        }
+    ]
+}
