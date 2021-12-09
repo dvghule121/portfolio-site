@@ -26,6 +26,7 @@
     padding: 2vw;
     display: flex;
     justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: white;
     background-size: 100%;
