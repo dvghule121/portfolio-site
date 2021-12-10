@@ -44,3 +44,7 @@ function openImg() {
     const class_c = document.getElementsByClassName("rounded-img-btn")
 
 }
+
+function toabout(){
+    window.location.href("#about")
+}

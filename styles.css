@@ -111,6 +111,7 @@ z-index: 4;
     max-width: 50vw;
     min-height: 80vh;
     padding: 0;
+    background: #000;
     overflow: hidden;
    
 }
@@ -230,7 +231,7 @@ button{
     }
     .intro-text{
         border-radius: 15px;
-        background-color: rgba(0, 0, 0, 0.603);
+        background-color: rgba(14, 12, 12, 0.603);
         padding: 5vh;
         position: relative;
         top: 5vh;
@@ -332,6 +333,9 @@ a{
       blink-caret .75s step-end infinite;
 
    
+  }
+  .typewriter{
+      padding: 2vw 3vh;
   }
  
 
