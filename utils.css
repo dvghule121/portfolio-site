@@ -155,10 +155,15 @@
 
 }
 
+.hideable-content {
+    max-height: 0;
+    text-align: center;
+}
 
 .card-view:hover .pr-name p{
     visibility: visible;
-    max-height: 50px
+    max-height: 50px;
+    min-width: 250px;
 
 }
 .name span{

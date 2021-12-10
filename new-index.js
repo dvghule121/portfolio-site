@@ -15,8 +15,14 @@ function cards() {
                 const card = `<div class="card-view">
                             <div class="rounded-img"><img src="`+ item["img"] + `" alt="" height="400px" width="350px"> </div>
                             <div class="pr-name">
-                            <a href="`+item["link"]+`"><h1>`+ item["name"] + `</h1></a>
+                            <a href="`+item["link"]+`"><h1>`+ item["name"] + `</h1></a>                           
+                            <div class="hideable-content">
                             <p>`+ item["desc"] + `</p>
+                            <div class="links">
+                                <a href="`+ item["gitrepo"] + `"><img src="images/Projects/git-icon.png" alt="github"></a>
+                                <a href="`+ item["yt"]+`"><img src="images/Projects/YouTube.png" alt="" ></a>
+                            </div>
+                            
                             
                             
                             </div>

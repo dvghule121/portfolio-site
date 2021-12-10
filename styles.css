@@ -155,13 +155,42 @@ button{
 }
 
 .card-view:hover .pr-name{
-    min-height: 200px;
-    top: -204px;
+    min-height: 250px;
+    top: -254px;
     justify-content: unset;
     background-color: rgba(0, 0, 0, 0.767);
  
 
 }
+
+.hideable-content{
+    display: flex;
+    flex-direction: column;    
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    gap: 10px;
+    margin-right: 2rem;
+    
+}
+
+.links img {
+    background: transparent;
+    width: 35px;
+    height: 35px;
+    border-radius: 0px;
+}
+
+.hideable-content p{
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+}
+
 
 .card-view:hover .pr-name p{
     visibility: visible;
