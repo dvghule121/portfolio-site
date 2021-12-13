@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>DynoCodes</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/utils.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Poppins:wght@600&family=Roboto&display=swap');
+</style>
+
+<script>
+
+
+var slideIndex = 0;
+
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("i1");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        
+    }
+
+    var slideIndex = 0;
+    showSlidesrep();
+
+    function showSlidesrep() {
+        var i;
+        var slides = document.getElementsByClassName("i1");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+
+    showSlidesrep()
+
+
+</script>
+
+
+<style>
+    body{
+        background-image: url("{{url_for('static', filename= 'styles/images/Projects5445736-fly-and-spin-through-space-less-stars-no-clouds-or-space-dust-transparent-stars-background-1920_1080_preview.png' )}}");
+          } 
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .i1 {
+        display: block;
+        
+
+
+
+    }
+
+    .images-scroll {
+        display: flex;
+        height: 70vh;
+        gap: 35vh;
+        max-width: 90vw;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        overflow: inherit;
+
+        
+        
+    }
+
+
+    .project-info {
+        padding-top: 10vh;
+        display: flex;
+        justify-content: normal;
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        /* background: red; */
+        padding-bottom: 10vh;
+        /* background-image: url("{{url_for('static', filename= 'styles/images/Projects5445736-fly-and-spin-through-space-less-stars-no-clouds-or-space-dust-transparent-stars-background-1920_1080_preview.png' )}}"); */
+        background-image: url("https://i.pinimg.com/originals/43/a0/86/43a0864d65f3f3f4e93854be732f0595.png");
+        /* background-image: url("https://iphoneswallpapers.com/wp-content/uploads/2019/12/Amoled-Space-iPhone-Wallpaper.jpg"); */
+        /* background-image: url("https://1.bp.blogspot.com/-CKrmdP0QxWw/X4G-dz1x8RI/AAAAAAAAbus/9SsEgs06wGQzHHOuVDlP1uIZMYv4cSSpACLcBGAsYHQ/s16000/amoled-cute-astronaut-HD.png");
+     
+       */
+       background-size: 100vw 100vw;
+       background-repeat: repeat-y;
+       margin-bottom: 5vh;
+      
+
+    }
+
+    .project-discription {
+        margin: 5vw 5vw 10vh;
+        font-family: cursive;
+        border: black dashed;
+        padding: 2vh 5vw;
+        background: white;
+        box-sizing: border-box;
+        box-shadow: 15px 15px 25px 0px #000000a6;
+        position: relative;
+
+
+    }
+
+    .project-name {
+        /* position: relative; */
+        /* z-index: 5; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 7vh 0 5vh 0;
+        /* top: 0.7vh;
+        width: 70vw; */
+       
+        
+       
+    }
+
+    .project-name h1 {
+        margin-top: 4vh;
+        color: rgb(255, 255, 255);
+        font-family: "Fizzy bubbles", cursive;
+        font-size: xx-large;
+    }
+
+    .lang-card:hover {
+        background: turquoise;
+        color: black;
+        box-shadow: 18px 18px 10px 0 rgb(0 0 0 / 55%);
+    }
+
+    .project-image {
+        display: flex;
+        margin-top: -15vh;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        overflow-y: clip;
+        top: 20vh;
+        height: 70vh;
+        width: 70vw;
+        padding: 0 4vh;
+       
+        background: rgba(255, 255, 255, 0);
+        background-size: 100%;
+            box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.219), 0 15px 10px 0 rgba(0, 0, 0, 0.219);
+    }
+
+    .used-langs-page {
+        display: flex;
+        margin-top: 3vh;
+        background: rgba(255, 255, 255, 0);
+        width: 80vw;
+        padding: 5vh 2vh;
+        box-shadow: 0 15px 10px 0 rgb(0 0 0 / 22%);
+        flex-wrap: wrap;
+        justify-content: space-around
+    }
+
+    .used-langs {
+
+        display: flex;
+        justify-content: space-around;
+        /* margin-top: -9vh; */
+        padding: 2vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 2vw;
+
+
+    }
+
+    .lang-card {
+        border-radius: 5px;
+        height: 10vh;
+        margin: 1vh 1vw;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        background: lightcoral;
+        color: rgb(255, 255, 255);
+        font-size: 1.5vw;
+        box-shadow: 15px 15px 10px 0 rgb(0 0 0 / 22%);
+        font-family:cursive, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+    .heading {
+        display: flex;
+        justify-content: center;
+        font-family: "Poppins";
+        font-size: larger;
+        margin:2vh 0;
+        width: 100%;
+        align-items: center;
+        color: white;
+        
+
+    }
+
+   
+
+    .links-big {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 3vh;
+    gap: 2vw;
+    }
+
+    .links-big img {
+        background: transparent;
+        width: 120px;
+        height: 100px;
+        border-radius: 0px;
+    }
+
+
+
+    .btn-l {
+        display: flex;
+        /* flex-direction: row; */
+        margin: 0 3vw;
+        border: none;
+        font-family: cursive;
+        background: rgb(71, 234, 255);
+        box-shadow: 15px rgb(7, 7, 7);
+        color: black;
+        font-size: small;
+        /* align-content: center; */
+        justify-content: center;
+
+        height: 50px;
+        width: 20px;
+      
+        outline: none;
+        font-weight: 600;
+
+        z-index: 6;
+        left: -3vw;
+        position: absolute;
+    }
+
+    .btn-r {
+        display: flex;
+        /* flex-direction: row; */
+        margin: 0 3vw;
+        border: none;
+        font-family: cursive;
+        background: rgb(71, 234, 255);
+        box-shadow: 15px rgb(7, 7, 7);
+        color: black;
+        font-size: small;
+        /* align-content: center; */
+        justify-content: center;
+
+        height: 50px;
+        width: 20px;
+       
+        outline: none;
+        font-weight: 600;
+
+        z-index: 6;
+        right: -3vw;
+        position: absolute;
+    }
+
+    /* .images-scroll {
+
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        overflow: scroll;
+    } */
+
+
+.images-scroll img {
+       
+    width: 100%;
+    /* height: 100%; */
+    max-height: 70vh;
+    max-width: 70vw;
+       
+        
+
+    }
+
+    .images-area{
+    display: contents;
+    width: 80vw;
+    max-height: 70vh;
+}
+
+
+
+    /* =============================================== */
+    /* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  z-index: 5;
+  top: 5vh;
+}
+
+.active, .dot:hover {
+  background-color: #666666;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.image-area{
+    display: contents;
+    width: 80vw;
+    max-height: 70vh;
+}
+
+
+</style>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-bar">
+                <div class="left flex item-centre">
+                    <div class="grpicon">
+                        <h1>DynoCodes </h1>
+                    </div>
+
+
+                </div>
+                <div class="right flex item-centre justify-between">
+                    <div>
+                        <a href="/">Home</a>
+                        <a href="/#about">about</a>
+                        <a href="#pr-pg">Work</a>
+                        <a href="#">team</a>
+                        <a href="/form">events</a>
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+
+        <section class="wrapper">
+            <div><div class="project-image">
+                <div>
+                    <button class="btn-l" onclick="plusSlides(-1)">
+                        <h1> < </h1>
+                    </button>
+                </div>
+                <div class="images-area">
+                <div class="images-scroll">
+
+                    <div class="i1 fade"> <img id="main" src="{{url_for('static', filename= name['imgs'][0] )}}" alt="">
+                    </div>
+                    <div class="i1 fade"> <img id="main" src="{{url_for('static', filename= name['imgs'][1] )}}" alt="">
+                    </div>
+                    <div class="i1 fade"> <img id="main" src="{{url_for('static', filename= name['imgs'][2] )}}" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+                <div>
+                    <button class="btn-r" onclick="plusSlides(1)">
+                        <h1>></h1>
+                    </button>
+                </div></div>
+
+            
+                <!-- The dots/circles -->
+            <div style="    text-align: center;
+            display: block;
+            position: relative;
+            z-index: 6;
+            top: 7.5vh;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+                
+            </div>
+            
+
+
+            <div class="project-info flex">
+                <div class="project-name" style="font-family: 'Poppins',san-serif;color: white;">
+                    <h1>{{name["name"]}}</h1>
+                </div>
+                <div class="project-discription">
+                    <p>  {{"  "+name["desc"]}}</p>
+                    <br><br><br>
+                </div>
+
+                <div class="used-langs-page">
+                    <div class="heading">
+                        <h1>Used languages and libraries and area of development</h1>
+                    </div>
+                    <div class="used-langs">
+                        <div class="lang-card">
+                            <h1>{{name["libs"][0]}}</h1>
+                        </div>
+                        <div class="lang-card">
+                            <h1>{{name["libs"][1]}}</h1>
+                        </div>
+                        <div class="lang-card">
+                            <h1>{{name["libs"][2]}}</h1>
+                        </div>
+                        <div class="lang-card">
+                            <h1>{{name["libs"][3]}}</h1>
+                        </div>
+                        <div class="lang-card">
+                            <h1>{{name["libs"][4]}}</h1>
+                        </div>
+                        <div class="lang-card">
+                            <h1>{{name["libs"][5]}}</h1>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                
+
+                <div class="used-langs-page">
+                    <div class="heading">
+                        <h1>project links</h1>
+                    </div>
+                    <div class="links-big">
+                        <a href="{{name['gitrepo']}}"><img
+                                src="{{url_for('static', filename='styles/images/Projects/git-icon.png')}}"
+                                alt="github"></a>
+                        <a href="{{name['yt']}}"><img
+                                src="{{url_for('static', filename='styles/images/Projects/YouTube.png')}}" alt=""></a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+    </main>
+
+</body>
+
+</html>

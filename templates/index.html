@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>DynoCodes</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/utils.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Poppins:wght@600&family=Roboto&display=swap');
+
+</style>
+
+
+<script>
+function cards() {
+    var car;
+    fetch("{{ url_for('static',filename='data/projects.json') }}")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+
+            var list = data["items"]
+
+
+
+            const container = document.getElementById('ca');
+            list.forEach(function (item, index) {
+                const card = `<div class="card-view">
+                            <div class="rounded-img"><a href="/details/`+ item["name"] + `"><img src='static/`+ item["img"] + `' alt="" height="400px" width="350px"></a> </div>
+                            <div class="pr-name">
+                            <a href="`+item["link"]+`"><h1>`+ item["name"] + `</h1></a>
+                            <div class="hideable-content">
+                            <p>`+ item["desc"] + `</p>
+                            <div class="links">
+                                <a href="`+ item["gitrepo"] + `"><img src="{{url_for('static', filename='styles/images/Projects/git-icon.png')}}" alt="github"></a>
+                                <a href="`+ item["yt"]+`"><img src="{{url_for('static', filename='styles/images/Projects/YouTube.png')}}" alt="" ></a>
+                            </div>
+
+
+
+                            </div>
+                            </div> `
+
+                container.innerHTML += card
+
+
+            });
+
+        })
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function openImg() {
+    const class_c = document.getElementsByClassName("rounded-img-btn")
+
+}
+
+function toabout(){
+    window.location.href("#about")
+}
+
+
+function getDetails(hash) {
+     window.location.href=("#"+hash)
+
+}
+
+
+
+</script>
+
+
+<body>
+<header>
+    <div class="container">
+        <nav class="nav-bar">
+            <div class="left flex item-centre">
+                <div class="grpicon">
+                    <h1><a href="/form"> DynoCodes</a> </h1>
+                </div>
+
+
+            </div>
+            <div class="right flex item-centre justify-between">
+                <div>
+                    <a href="#main">Home</a>
+                    <a href="#about">about</a>
+                    <a href="#pr-pg">Work</a>
+                    <a href="#">team</a>
+                    <a href="/">contact</a>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="intro-page " id="main">
+
+
+        <div class="right intro-text item-centre ">
+            <div class="typewriter">
+                <h3 id="movetxt">hey ______ ,</h3>
+                <h1>I'm <span>Dyno</span></h1>
+                <p id="demo"> Normal boy with Coding Powers</p>
+            </div>
+            <div class="button">
+                <Button class="btn" onclick="javascript:window.location.href='#about'">about me</Button>
+                <Button class="btn" onclick="javascript:window.location.href='#mycv'">My cv</Button>
+            </div>
+
+        </div>
+        <div class="left">
+            <img src="{{ url_for('static',filename='styles/images/astronaut-hanging-on-moon-4k-fn (2)_adobespark.png') }}" alt="" width="400px">
+        </div>
+    </section>
+
+    <section class="about flex" id="about">
+
+
+        <div class="left">
+            <img src="{{ url_for('static', filename='styles/images/raf,750x1000,075,t,000000_44f0b734a5.u2.jpg') }}" alt="noimagehere">
+
+        </div>
+        <div class="right flex item-centre justify-between">
+            <h1>About me</h1>
+            <h6>I'm currently a Information Tecnology Undergraduate at D y patil college of engineering, Akurdi,
+                pune. I am interested in Machine Learning, Cryptography and Image Processing..
+                I have coding experience in C++, Python, java, kotlin and I'm open to gaining new experiences.</h6>
+
+        </div>
+    </section>
+    <section class="item-centre" id="pr-pg">
+        <div class="heading text-head">
+            <h1>My work</h1>
+        </div>
+
+        <div class="card-area" id="ca">
+            <script>cards()</script>
+
+        </div>
+        
+
+
+        </div>
+    </section>
+
+
+</main>
+
+</body>
+
+</html>

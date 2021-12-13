@@ -1,3 +1,0 @@
-git add .
-git commit -m "thirdcommit"
-git push -u origin master

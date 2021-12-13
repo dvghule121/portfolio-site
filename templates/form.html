@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>DynoCodes</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/form.css') }}">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Poppins:wght@600&family=Roboto&display=swap');
+</style>
+
+<script>
+
+    var btn = document.getElementById("submit-btn")
+    function confirmBooking() {
+        return confirm("clicked");
+    }
+</script>
+
+<body>
+
+
+    <main>
+        <section>
+            <div class="form">
+                <div class="flex">
+                    <div class="title">Welcome</div>
+                    <div class="subtitle">Let's create new project!</div>
+                </div>
+
+
+                <div class="input-area">
+
+
+                    <form name="projects" onsubmit="return confirm('add or update project')" method="POST"
+                        enctype="multipart/form-data">
+
+
+                        <div class="info flex">
+                            <div class="input-container ic2">
+                                <input id="name" class="input" name="name" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="name" class="placeholder">Name</label>
+                            </div>
+                            <div class="input-container-d ic2">
+                                <textarea id="discription" class="input" name="disc" type="text"
+                                    placeholder=""></textarea>
+                                <div class="cut"></div>
+                                <label for="discription" class="placeholder">Discription</label>
+                            </div>
+                            <div class="input-container ic2">
+                                <input id="link" class="input" name="link" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="link" class="placeholder">link</label>
+                            </div>
+                            <div class="input-container ic1">
+                                <input id="youtube link" class="input" name="yt" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="youtube link" class="placeholder">youtube link</label>
+                            </div>
+
+                            <div class="input-container ic2">
+                                <input id="github" class="input" name="github" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="github" class="placeholder">github</label>
+                            </div>
+                            <div class="ic3">
+                                <input id="Image" class="input" type="file" name="img" placeholder=" " />
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="link-langs">
+                            <div><br></div>
+                            <div class="subtitle">Languages/Libraries used</div>
+
+                            <div class="input-container ic2">
+                                <input id="lib-1" class="input" name="lib-1" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="lib-1" class="placeholder">lib-1</label>
+                            </div>
+                            <div class="input-container ic2">
+                                <input id="lib-2" class="input" name="lib-2" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="lib-2" class="placeholder">lib-2</label>
+                            </div>
+                            <div class="input-container ic2">
+                                <input id="lib-3" class="input" name="lib-3" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="lib-3" class="placeholder">lib-3</label>
+                            </div>
+                            <div class="input-container ic2">
+                                <input id="lib-4" class="input" name="lib-4" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="lib-4" class="placeholder">lib-4</label>
+                            </div>
+                            <div class="input-container ic2">
+                                <input id="lib-5" class="input" name="lib-5" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="lib-5" class="placeholder">lib-5</label>
+                            </div>
+                            <div class="input-container ic2">
+                                <input id="lib-6" class="input" name="lib-6" type="text" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="lib-6" class="placeholder">lib-6</label>
+                            </div>
+
+                        </div>
+                        <div class="password-submit">
+                            <div class="input-container ic2">
+                                <input id="password" class="input" name="pass" type="password" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="password" class="placeholder">password</label>
+                            </div>
+
+                            <button class="submit">submit</button>
+
+                        </div>
+                        <div class="imgs">
+                            <div class="subtitle">add more images </div>
+
+                            <div class="ic3">
+                                <input id="Image-1" class="input" type="file" name="img-1" placeholder=" " />
+
+                            </div>
+                            <div class="ic3">
+                                <input id="Image-2" class="input" type="file" name="img-2" placeholder=" " />
+
+                            </div>
+                            <div class="ic3">
+                                <input id="Image-3" class="input" type="file" name="img-3" placeholder=" " />
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
