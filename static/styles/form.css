@@ -1,13 +1,8 @@
-.container{
+.container-f{
   position: fixed;
   justify-content: flex-start;
 }
 
-body{
-    display:flex;
-    justify-content: space-around;
-
-}
 .form {
   flex-direction: column;
   display: flex;
@@ -17,7 +12,7 @@ body{
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
-  height:fit-content;
+  /* height:fit-content; */
   padding: 20px;
   align-items:center;
 }
@@ -25,7 +20,7 @@ body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .title {
   color: #eee;
@@ -47,7 +42,7 @@ body{
   height: 50px;
   position: relative;
   /* width: 100%; */
-  width: 30vw;
+  max-width: 30vw;
 
 }
 

@@ -1,5 +1,6 @@
 @import url("{{ url_for('static',filename='styles/utils.css') }}");
 @import url("{{ url_for('static',filename='styles/form.css') }}");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 *{
     margin: 0;
@@ -8,7 +9,10 @@
     cursor: pointer;
 }
 
-
+body{
+    background-image: url("images/5445736-fly-and-spin-through-space-less-stars-no-clouds-or-space-dust-transparent-stars-background-1920_1080_preview\ \(1\).png");  
+    
+}
 
 
 .right a, .grpicon{
@@ -18,20 +22,16 @@
 }
 
 .intro-page{
-    background-color: rgb(0, 0, 0);
-    min-height: 100vh;
+
+    height: 100vh;
     max-width: 100vw;
-    background-image: url("images/5445736-fly-and-spin-through-space-less-stars-no-clouds-or-space-dust-transparent-stars-background-1920_1080_preview\ \(1\).png");  
     padding: 2vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     color: white;
-    background-size: 100%;
-    background-repeat: repeat-y;
-   
-    
+  
 }
 .intro-text h1{
     color: white;
@@ -100,13 +100,14 @@
 
 .intro-page .right{ 
     
-min-width: 50vw;
-padding: 0;
-position: relative;
-z-index: 4;
+    min-width: 50vw;
+    padding: 0;
+    position: relative;
+    z-index: 4;
 
        
 }
+
 .about .left {
     
     max-height:80vh;
@@ -123,11 +124,12 @@ z-index: 4;
     
 }
 .about .right{
-   
-    justify-content: center;   
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    justify-content: center;
     max-width: 45vw;
-    max-height: 80vh;
-    min-height: 80vh;
+    height: 80vh;
     padding: 4vw;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.493);
@@ -137,6 +139,7 @@ z-index: 4;
 .about .right h1{
     margin-bottom: 1rem;
 }
+
 .about .right h6{
     max-height: 50vh;
     max-width: 40vw;
@@ -149,7 +152,7 @@ z-index: 4;
 
 
 
-/*  ======================================  box ========================================*/
+/*======================================  box  ========================================*/
 .card-view .rounded-img {
     border-radius: 25px;
 }
@@ -300,14 +303,7 @@ button{
         margin: 0;
         padding: 0;
        
-
-        
     }
-    
-   
-   
-
-
 
 }
 a{
@@ -320,7 +316,7 @@ a{
 }
 
 
-/* ================================ */
+/* ================================ Info animation ====================================================================*/
 
 
   .typewriter h1 {
@@ -358,3 +354,8 @@ a{
 section{
     min-height: 100vh;
 }
+
+
+
+/* ===================================index.html internal css=============================================================== */
+

@@ -4,39 +4,34 @@ const express = require
 
 function cards() {
     var car;
-    fetch("projects.json")
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-
-            var list = data["items"]
+    list ={{data}}
 
 
 
-            const container = document.getElementById('ca');
-            list.forEach(function (item, index) {
-                const card = `<div class="card-view">
-                            <div class="rounded-img"><img src="`+ item["img"] + `" alt="" height="400px" width="350px"> </div>
-                            <div class="pr-name">
-                            <a href="`+item["link"]+`"><h1>`+ item["name"] + `</h1></a>                           
-                            <div class="hideable-content">
-                            <p>`+ item["desc"] + `</p>
-                            <div class="links">
-                                <a href="`+ item["gitrepo"] + `"><img src="images/Projects/git-icon.png" alt="github"></a>
-                                <a href="`+ item["yt"]+`"><img src="images/Projects/YouTube.png" alt="" ></a>
-                            </div>
-                            
-                            
-                            
-                            </div>
-                            </div> `
-
-                container.innerHTML += card
+    const container = document.getElementById('ca');
+    list.forEach(function (item, index) {
+        const card = `<div class="card-view">
+                    <div class="rounded-img"><img src="`+ item["img"] + `" alt="" height="400px" width="350px"> </div>
+                    <div class="pr-name">
+                    <a href="`+item["link"]+`"><h1>`+ item["name"] + `</h1></a>
+                    <div class="hideable-content">
+                    <p>`+ item["desc"] + `</p>
+                    <div class="links">
+                        <a href="`+ item["gitrepo"] + `"><img src="images/Projects/git-icon.png" alt="github"></a>
+                        <a href="`+ item["yt"]+`"><img src="images/Projects/YouTube.png" alt="" ></a>
+                    </div>
 
 
-            });
 
-        })
+                    </div>
+                    </div> `
+
+        container.innerHTML += card
+
+
+    });
+
+
 }
 
 function sleep(ms) {

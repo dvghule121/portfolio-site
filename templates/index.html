@@ -8,66 +8,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Poppins:wght@600&family=Roboto&display=swap');
-
 </style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <script>
-function cards() {
-    var car;
-    fetch("{{ url_for('static',filename='data/projects.json') }}")
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-
-            var list = data["items"]
+    function cards() {
+        var car;
 
 
 
-            const container = document.getElementById('ca');
-            list.forEach(function (item, index) {
-                const card = `<div class="card-view">
-                            <div class="rounded-img"><a href="/details/`+ item["name"] + `"><img src='static/`+ item["img"] + `' alt="" height="400px" width="350px"></a> </div>
-                            <div class="pr-name">
-                            <a href="`+item["link"]+`"><h1>`+ item["name"] + `</h1></a>
-                            <div class="hideable-content">
-                            <p>`+ item["desc"] + `</p>
-                            <div class="links">
-                                <a href="`+ item["gitrepo"] + `"><img src="{{url_for('static', filename='styles/images/Projects/git-icon.png')}}" alt="github"></a>
-                                <a href="`+ item["yt"]+`"><img src="{{url_for('static', filename='styles/images/Projects/YouTube.png')}}" alt="" ></a>
-                            </div>
+
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function openImg() {
+        const class_c = document.getElementsByClassName("rounded-img-btn")
+
+    }
+
+    function toabout() {
+        window.location.href("#about")
+    }
 
 
+    function getDetails(hash) {
+        window.location.href = ("#" + hash)
 
-                            </div>
-                            </div> `
-
-                container.innerHTML += card
-
-
-            });
-
-        })
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function openImg() {
-    const class_c = document.getElementsByClassName("rounded-img-btn")
-
-}
-
-function toabout(){
-    window.location.href("#about")
-}
-
-
-function getDetails(hash) {
-     window.location.href=("#"+hash)
-
-}
+    }
 
 
 
@@ -75,83 +46,188 @@ function getDetails(hash) {
 
 
 <body>
-<header>
-    <div class="container">
-        <nav class="nav-bar">
-            <div class="left flex item-centre">
-                <div class="grpicon">
-                    <h1><a href="/form"> DynoCodes</a> </h1>
+    <header>
+        <div class="container">
+            <nav class="nav-bar">
+                <div class="left flex item-centre">
+                    <div class="grpicon">
+                        <h1><a href="/form"> DynoCodes</a> </h1>
+                    </div>
+
+
+                </div>
+                <div class="right flex item-centre justify-between">
+                    <div>
+                        <a href="#main">Home</a>
+                        <a href="#about">about</a>
+                        <a href="#pr-pg">Work</a>
+                        <a href="#">team</a>
+                        <a href="#contact">contact</a>
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="intro-page " id="main">
+
+
+            <div class="right intro-text item-centre ">
+                <div class="typewriter">
+                    <h3 id="movetxt">hey ______ ,</h3>
+                    <h1>I'm <span>Dyno</span></h1>
+                    <p id="demo"> Normal boy with Coding Powers</p>
+                </div>
+                <div class="button">
+                    <Button class="btn" onclick="javascript:window.location.href='#about'">about me</Button>
+                    <Button class="btn" onclick="javascript:window.location.href='#mycv'">My cv</Button>
                 </div>
 
+            </div>
+            <div class="left">
+                <img src="{{ url_for('static',filename='styles/images/astronaut-hanging-on-moon-4k-fn (2)_adobespark.png') }}"
+                    alt="" width="400px">
+            </div>
+        </section>
+
+        <section class="about flex" id="about">
+
+
+            <div class="left">
+                <img src="{{ url_for('static', filename='styles/images/raf,750x1000,075,t,000000_44f0b734a5.u2.jpg') }}"
+                    alt="noimagehere">
 
             </div>
             <div class="right flex item-centre justify-between">
-                <div>
-                    <a href="#main">Home</a>
-                    <a href="#about">about</a>
-                    <a href="#pr-pg">Work</a>
-                    <a href="#">team</a>
-                    <a href="/">contact</a>
+                <h1>About me</h1>
+                <h6>I'm currently a Information Tecnology Undergraduate at D y patil college of engineering, Akurdi,
+                    pune. I am interested in Machine Learning, Cryptography and Image Processing..
+                    I have coding experience in C++, Python, java, kotlin and I'm open to gaining new experiences.</h6>
 
+            </div>
+        </section>
+        <section class="item-centre nobg" id="pr-pg">
+            <div class="heading text-head">
+                <h1>My work</h1>
+            </div>
 
+            <div class="card-area" id="ca">
+                {% if length == 0:  %}
+                <div class="card-view-add">
+                    <div class="rounded-img-btn"><img
+                                src="https://cdn3.iconfinder.com/data/icons/files-bluetone/64/File_missing_not_found_page-512.png" alt="" height="400px" width="350px">
+                    </div>
+                    <div class="pr-name-add">
+                       
+                        <a href="">
+                            <h1>No project to show</h1>
+                        </a>
+                
+                    </div>
                 </div>
+                
+
+                
+                
+                
+                
+                
+                {% else %}
+                {% for i in range(length) %}
+
+                <div class="card-view">
+                    <div class="rounded-img"><a href="/details/{{data[i]['name']}}"><img
+                                src="{{ data[i]['img']}}" alt="" height="400px" width="350px"></a>
+                    </div>
+                    <div class="pr-name">
+                        <a href="{{data[i]['link']}}">
+                            <h1>{{data[i]['name']}}</h1>
+                        </a>
+                        <div class="hideable-content">
+                            <p>{{data[i]['desc']}}</p>
+                            <div class="links">
+                                <a href="{{data[i]['gitrepo']}}"><img
+                                        src="{{url_for('static',filename='styles/images/Projects/git-icon.png')}}"
+                                        alt="github"></a>
+                                <a href="{{data[i]['yt']}}"><img
+                                        src="{{url_for('static',filename='styles/images/Projects/YouTube.png')}}"
+                                        alt=""></a>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                {% endfor %}
+                {% endif %}
+
+
+
+
+
             </div>
-        </nav>
-    </div>
-</header>
-<main>
-    <section class="intro-page " id="main">
+        </section>
+        <section id="contact" class="flex item-centre" style="flex-direction: column;">
+            
+            <div class="container-contact">
+                <div class="heading" style="margin: 2vh;color: rgb(0, 0, 0); text-align: center;">
+                    <h1>Contact Me</h1>
+                </div>
+                <form method="post" action="/msg">
 
+                    <label for="fname">Your Name</label>
+                    <input type="text" name="fname" id="fname" autocomplete="false" placeholder="Your name..">
 
-        <div class="right intro-text item-centre ">
-            <div class="typewriter">
-                <h3 id="movetxt">hey ______ ,</h3>
-                <h1>I'm <span>Dyno</span></h1>
-                <p id="demo"> Normal boy with Coding Powers</p>
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" name="email" autocomplete="false" placeholder="Your email address..">
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" autocomplete="false" placeholder="Write something.."
+                        style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit">
+
+                </form>
             </div>
-            <div class="button">
-                <Button class="btn" onclick="javascript:window.location.href='#about'">about me</Button>
-                <Button class="btn" onclick="javascript:window.location.href='#mycv'">My cv</Button>
+        </section>
+
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <h3>DynoCodes</h3>
+            <p style="text-align: left;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">DynoCodes is a blog website where you will find great Information on web design, Android, Machine
+                Learning, Ai and amazing projects. Here each project and concepts are beautifully described step by step
+                with the required source code.</p>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/dnyaneshwar.ghule.754570"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/dvghule121/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCp8wp_ZU0DiVvGt5KZd4nWg"><i class="fa fa-youtube"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/dnyaneshwar-ghule-364487213"><i
+                            class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">DynoCodes</a> </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
             </div>
-
-        </div>
-        <div class="left">
-            <img src="{{ url_for('static',filename='styles/images/astronaut-hanging-on-moon-4k-fn (2)_adobespark.png') }}" alt="" width="400px">
-        </div>
-    </section>
-
-    <section class="about flex" id="about">
-
-
-        <div class="left">
-            <img src="{{ url_for('static', filename='styles/images/raf,750x1000,075,t,000000_44f0b734a5.u2.jpg') }}" alt="noimagehere">
-
-        </div>
-        <div class="right flex item-centre justify-between">
-            <h1>About me</h1>
-            <h6>I'm currently a Information Tecnology Undergraduate at D y patil college of engineering, Akurdi,
-                pune. I am interested in Machine Learning, Cryptography and Image Processing..
-                I have coding experience in C++, Python, java, kotlin and I'm open to gaining new experiences.</h6>
-
-        </div>
-    </section>
-    <section class="item-centre" id="pr-pg">
-        <div class="heading text-head">
-            <h1>My work</h1>
         </div>
 
-        <div class="card-area" id="ca">
-            <script>cards()</script>
-
-        </div>
-        
-
-
-        </div>
-    </section>
-
-
-</main>
+    </footer>
 
 </body>
 

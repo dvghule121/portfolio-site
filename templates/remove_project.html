@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>DynoCodes</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/utils.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/form.css') }}">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Poppins:wght@600&family=Roboto&display=swap');
+</style>
+
+<script>
+
+    var btn = document.getElementById("submit-btn")
+    function confirmBooking() {
+        return confirm("clicked");
+    }
+</script>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-bar">
+                <div class="left flex item-centre">
+                    <div class="grpicon">
+                        <h1><a href="/form"> DynoCodes</a> </h1>
+                    </div>
+
+
+                </div>
+                <div class="right flex item-centre justify-between">
+                    <div>
+                        <a href="#main">Home</a>
+                        <a href="#about">about</a>
+                        <a href="#pr-pg">Work</a>
+                        <a href="#">team</a>
+                        <a href="#contact">contact</a>
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+            <div class="form">
+                <div class="flex" style="flex-direction: column;">
+                    <div class="title">Welcome</div>
+                    <div class="subtitle">Let's create new project!</div>
+                </div>
+
+
+                <div class="input-area flex">
+
+
+                    <form name="projects" onsubmit="return confirm('Remove project')" method="POST"
+                        enctype="multipart/form-data">
+
+      
+                        <div class="input-container ic2">
+                            <select class="input" name="name" id="prname">
+                                {% for i in range(len) %}
+                                <option name={{i}} value={{i}}>{{name_list[i]}}</option>
+                                {% endfor %}
+                                
+                            </select>               
+                            <div class="cut"></div>
+                            <label for="prname" class="placeholder">Name</label>
+                        </div>
+
+                            <div class="input-container ic2">
+                                <input id="password" class="input" name="pass" type="password" placeholder=" " />
+                                <div class="cut"></div>
+                                <label for="password" class="placeholder">password</label>
+                            </div>
+
+                            <button class="submit">submit</button>
+
+                        </div>
+                        </form>
+                        
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
