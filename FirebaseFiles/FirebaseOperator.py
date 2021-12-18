@@ -36,14 +36,17 @@ class FirebaseOperatorClass:
     def __init__(self):
         pass
 
-    def loadData(self):
-        try:
-            self.ref = db.reference("/items")
-            self.projects = self.ref.get()
-            Data = self.projects
+    def loadData(self,ver="online"):
+        if ver == "online":
+            try:
+                self.ref = db.reference("/items")
+                self.projects = self.ref.get()
+                Data = self.projects
 
 
-        except:
+            except:
+                Data = file_contents["items"]
+        else:
             Data = file_contents["items"]
         return Data
 

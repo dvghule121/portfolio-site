@@ -6,8 +6,10 @@ from flask import Flask, request, render_template, redirect
 import FirebaseFiles.FirebaseOperator as fo
 import FirebaseFiles.pyrebaseApp as imgsaver
 
+
 try:
     Operator = fo.FirebaseOperatorClass()
+
 except:
     pass
 
@@ -42,7 +44,7 @@ def details(name):
 
 @app.route('/')
 def start():
-    data = Operator.loadData()
+    data = Operator.loadData(ver="offline")
     print(data)
     if data != None:
         return render_template("index.html", data=data, length=len(data))
@@ -186,5 +188,5 @@ def msgin():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
 
