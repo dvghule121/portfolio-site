@@ -1,59 +1,6 @@
 {
   "items": [
 
-    {
-      "desc": "Medico assist is a ai web-app which predicts the disease on the basic of symptoms. it uses tensorflow library to make model and prediction. \u2757\u2757\u2757 dont make practical dicesions on the basis of app predictions \u2757\u2757\u2757",
-      "gitrepo": "https://github.com/dvghule121/Dyno-medicoAssist",
-      "img": "https://firebasestorage.googleapis.com/v0/b/dynocodes.appspot.com/o/images%2Fdyno.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk1NmMwNDEwZmE1MjFjMTZlNDQ2NWE4ZjVjODU5NjZhNWY1MDk5NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZHlub2NvZGVzIiwiYXVkIjoiZHlub2NvZGVzIiwiYXV0aF90aW1lIjoxNjM5ODQ4NjQ5LCJ1c2VyX2lkIjoiTHFBTXB2QXVnZWVMMTZnWUVwUzlQRk5rampoMSIsInN1YiI6IkxxQU1wdkF1Z2VlTDE2Z1lFcFM5UEZOa2pqaDEiLCJpYXQiOjE2Mzk4NDg2NDksImV4cCI6MTYzOTg1MjI0OSwiZW1haWwiOiJkdmdodWxlMTIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkdmdodWxlMTIxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.Q3vTBSkhfeYeCsFZRreZQWSmSF0sAGr0Ly9pw8lVmJ1JTDw_26y8hWWOCihMLvS61iTkUAUMhSmPY4uuVk2nh7AUcpjeOtRfVowDFoSfCUJRA_MLhtwAMcbWSGR8FOVH8sEzesozr5fOkbgBDyDWKzfXT84wqtUh2VHoEcJo4Ib_y-RbKs6RX5IWpd3k-UBJRRcGcPSRvg3Go1k5tmzAeIYUZLVKSbxrh32teQSW-q7cG2q0iJ5TZuou3drJ_IMj1B9E66fSILOoKt2nt02qhjxA5ti2_hE4Tk1gprh-efR99Xpv8xYGDSDPCBnEhcvvzFSCOejV2CwfFXDAtquzMA",
-      "img_name": "dyno.jpg",
-      "imgs": [
-        "https://firebasestorage.googleapis.com/v0/b/dynocodes.appspot.com/o/images%2FScreenshot%20%2827%29.png?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk1NmMwNDEwZmE1MjFjMTZlNDQ2NWE4ZjVjODU5NjZhNWY1MDk5NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZHlub2NvZGVzIiwiYXVkIjoiZHlub2NvZGVzIiwiYXV0aF90aW1lIjoxNjM5ODQ4NjI2LCJ1c2VyX2lkIjoiTHFBTXB2QXVnZWVMMTZnWUVwUzlQRk5rampoMSIsInN1YiI6IkxxQU1wdkF1Z2VlTDE2Z1lFcFM5UEZOa2pqaDEiLCJpYXQiOjE2Mzk4NDg2MjYsImV4cCI6MTYzOTg1MjIyNiwiZW1haWwiOiJkdmdodWxlMTIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkdmdodWxlMTIxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.nekFw5YkOxg5KNjvx0SVYpZG1DcUzXek9paSrIxBTR937eoOPDJ0yENV6LDwVk8GocYl6a_pdGwMsWEA_tLDAOGwW0Pd-KXS7arNqFwmBYNIm8_1LG0BK-XkiCh3lhPmN_5k0NlcevozaCXy2RwLzpfbx4i-3qj0yrJ4xq4ULNBkzDQkmUHow_GFktSAHp8-j-_ULQS29oSMHBVyf1MH2BTTDGt5e6TDS7pChwsJpm-CayjXmSazT-OXixiIeGOXqtxJpW9xvEw6xYyfdpbqOFf4ojV2eb0aC09nHwylB18cdGPdh6nB_o0c-HgVrLAn_kqdgC1jVmZ12QKe6avanQ",
-        "https://firebasestorage.googleapis.com/v0/b/dynocodes.appspot.com/o/images%2FScreenshot%202021-12-13%20235558.png?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk1NmMwNDEwZmE1MjFjMTZlNDQ2NWE4ZjVjODU5NjZhNWY1MDk5NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZHlub2NvZGVzIiwiYXVkIjoiZHlub2NvZGVzIiwiYXV0aF90aW1lIjoxNjM5ODQ4NjMzLCJ1c2VyX2lkIjoiTHFBTXB2QXVnZWVMMTZnWUVwUzlQRk5rampoMSIsInN1YiI6IkxxQU1wdkF1Z2VlTDE2Z1lFcFM5UEZOa2pqaDEiLCJpYXQiOjE2Mzk4NDg2MzMsImV4cCI6MTYzOTg1MjIzMywiZW1haWwiOiJkdmdodWxlMTIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkdmdodWxlMTIxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.Eif85otGy3NfyIaGsSZXRLR2m8gjm-RtMN_0W7-mBx2gFTMzdfXrfgaxVyU8BsPePEN-Vc2F3j_XjTs9vV7MCaqwvJqL4vaW-2UZiapJQzSrW8elH77TT9PyrvgwmdcuQG4IC42BTgeJMSTSTPj2AxNpAENpvRkWvhhicSY-Gy4ez4ioURkRUiO7hyZTi67FSDWsR36x0feoe8R89oxjQsWgNdiVNhIAogxC4CEPpkvMOnuWfX6wY14aa2qnv9DfyjSgLDGR-LSbWrV6I2aTsq7mTu2LoFZvtjeBdrivpe_zbTyevApdyXhVN7Uf3JmxwtP5TV2Ysd_CFA1UPHoPyw",
-        "https://firebasestorage.googleapis.com/v0/b/dynocodes.appspot.com/o/images%2FScreenshot%20%2827%29.png?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk1NmMwNDEwZmE1MjFjMTZlNDQ2NWE4ZjVjODU5NjZhNWY1MDk5NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZHlub2NvZGVzIiwiYXVkIjoiZHlub2NvZGVzIiwiYXV0aF90aW1lIjoxNjM5ODQ4NjQxLCJ1c2VyX2lkIjoiTHFBTXB2QXVnZWVMMTZnWUVwUzlQRk5rampoMSIsInN1YiI6IkxxQU1wdkF1Z2VlTDE2Z1lFcFM5UEZOa2pqaDEiLCJpYXQiOjE2Mzk4NDg2NDEsImV4cCI6MTYzOTg1MjI0MSwiZW1haWwiOiJkdmdodWxlMTIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkdmdodWxlMTIxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.G53Oagarj4Mf22DSKvV3yrJSvhbB1scXtD8KLA3hCkFOfFzh8iEPRsZLTktlyoFnNto7TgUxAJ0AMDW48p_-fljnwdoT4R9gOeHdtvP1i1vjepte5Qfi1Y1MXV821OHTd5Q5PKQhMGa_uasleMkGKiw7aN6mSNXklLmFeDZApplJXJph9xaZkdV1st0lCuu0qB7oShu4ZvH3ZHHRa2TMU8nqjVboG5NYfLX1MLeh-vJSQbex9SxQsAH4APyx4OpI3nQS65WuBoC5paafW6ARHh96ayIY3tiqBBF6_v4ADIvv_kCni4TpK32rtx8KbDufgtBEu1D15RuCHVs-fboGIA"
-      ],
-      "imgs_names": [
-        "Screenshot (27).png",
-        "Screenshot 2021-12-13 235558.png",
-        "Screenshot (27).png"
-      ],
-      "libs": [
-        "Tensorflow",
-        "Python",
-        "Html/css",
-        "Heroku",
-        "Flask",
-        "--"
-      ],
-      "link": "https://dyno-medicoassist.herokuapp.com/",
-      "name": "Medico - Assist",
-      "yt": ""
-    },
-    {
-      "desc": "The Coder's Library for you where you can access information on some of the most famous programming languages starting from C/C++ to learning Basics of Web Development with HTML,CSS and JS.\ud83e\udd73 Here Is your all for one app having the notes of Languages in which you want to get Best\ud83d\ude01. So get started!!! We would be glad to here your feedback and responses about this project.",
-      "gitrepo": "https://github.com/dvghule121/Coder-s-library",
-      "img": "https://firebasestorage.googleapis.com/v0/b/dynocodes.appspot.com/o/images%2Fipadreader-1.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk1NmMwNDEwZmE1MjFjMTZlNDQ2NWE4ZjVjODU5NjZhNWY1MDk5NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZHlub2NvZGVzIiwiYXVkIjoiZHlub2NvZGVzIiwiYXV0aF90aW1lIjoxNjM5ODQ5MjIyLCJ1c2VyX2lkIjoiTHFBTXB2QXVnZWVMMTZnWUVwUzlQRk5rampoMSIsInN1YiI6IkxxQU1wdkF1Z2VlTDE2Z1lFcFM5UEZOa2pqaDEiLCJpYXQiOjE2Mzk4NDkyMjIsImV4cCI6MTYzOTg1MjgyMiwiZW1haWwiOiJkdmdodWxlMTIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkdmdodWxlMTIxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.jCGOQXVM3qxLdPmVTtAlcTFd8cdCu0tzvyAX80QNwWZBA_KwIo3ul0_gC3801HWR-RlmsaOwI8KqZPHOb9Ko2o1eCWvgslMeBAgOx6J36umXOaynxw1CXeZJFSOpgz_g5UInBiAkTwBdR-ENhhrEHDSEHEbUkGHMXkmxcO8Uii3dkK9QaOeUHRV3BOi4jJE1w3Ei685nl6agjdGZAawBXbCN51cLkSFpOZYbFFrPwi4QT1L6T-U1HJb88c2ASqSb34r1UI5K-oFB6DDSY3rVGq2wvN0XX79vwEAwVjTlEp1a19OZV8vHapqdSYGYGyZ-aHxj-s7wmyCdfBuIRYl4Lg",
-      "img_name": "ipadreader-1.jpg",
-      "imgs": [
-        "https://firebasestorage.googleapis.com/v0/b/dynocodes.appspot.com/o/images%2F138829209-34289e96-84db-4b34-82d4-325d8a620f5e.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk1NmMwNDEwZmE1MjFjMTZlNDQ2NWE4ZjVjODU5NjZhNWY1MDk5NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZHlub2NvZGVzIiwiYXVkIjoiZHlub2NvZGVzIiwiYXV0aF90aW1lIjoxNjM5ODQ5MjA2LCJ1c2VyX2lkIjoiTHFBTXB2QXVnZWVMMTZnWUVwUzlQRk5rampoMSIsInN1YiI6IkxxQU1wdkF1Z2VlTDE2Z1lFcFM5UEZOa2pqaDEiLCJpYXQiOjE2Mzk4NDkyMDYsImV4cCI6MTYzOTg1MjgwNiwiZW1haWwiOiJkdmdodWxlMTIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkdmdodWxlMTIxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.qX0tl76VY9uGGFrcw6kIcinMxzuY0Wn1DvCQUphuivetcOirCvytXvjLydPyiv--rwgrgdgD54qaxdMTRqd2Togwf1Nl5HxAuLoTP1kpszduBwEu36dXpXqy2NidtDdC6A11vtMm7_0kFw2zu-6by5HXhyFewZEnjS5VQTbX5ctsSZecVRUL2bOBXWoUCA-507OE01Qy0horeETgnziLBUcXGv10azIRPd6ANJu1M5jf_jk0nUBNg1xXKsf2uYvc8ofZG7M1-MoH9guLI8G5dtGNaTarJt2blgoRqhLNVKHXNKxa8WzdjGI7iL4ctYYv39-3qLeFhQgpYIDy8azWNA",
-        "https://firebasestorage.googleapis.com/v0/b/dynocodes.appspot.com/o/images%2F138829167-0ece381b-4941-45c4-a971-e25b0896b1b9%20%281%29.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk1NmMwNDEwZmE1MjFjMTZlNDQ2NWE4ZjVjODU5NjZhNWY1MDk5NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZHlub2NvZGVzIiwiYXVkIjoiZHlub2NvZGVzIiwiYXV0aF90aW1lIjoxNjM5ODQ5MjEyLCJ1c2VyX2lkIjoiTHFBTXB2QXVnZWVMMTZnWUVwUzlQRk5rampoMSIsInN1YiI6IkxxQU1wdkF1Z2VlTDE2Z1lFcFM5UEZOa2pqaDEiLCJpYXQiOjE2Mzk4NDkyMTIsImV4cCI6MTYzOTg1MjgxMiwiZW1haWwiOiJkdmdodWxlMTIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkdmdodWxlMTIxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.nlL701R-VCN8reHf7wglUk8mzxhItk5UKvC8MdpaL_dgWu-xVzqO-DwnVZq1bnO13YEWfzouyf9xOpYLrItgpB2YXY3I5Z_9_SJoc1ycNc_e4g6ipPzuq6N-skV4WHzEs72xrI6RuemLYYTK5dKSQALGhvSx3R8-kcHUeU8HG8lU8Hx6Me3j7bxX2uGQac3OuPi5ByuqtPUrnN1GwE-fHbwZCz_p4RFVK3BzMw5NAgQzaWy-HS4K3uDxsqjn0ZxDWVX7OCVMvNcEeXa1SxDJj9MhJ2uT7sVDL1rNHwCpDAHEMmDG-hymAvDRXXYxwKCQJeL2Ysqsd7lMfJiMeGrpbQ",
-        "https://firebasestorage.googleapis.com/v0/b/dynocodes.appspot.com/o/images%2F138829187-66fba19b-6ff6-483c-8aaa-4637df4ea8b4.jpg?alt=media&token=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk1NmMwNDEwZmE1MjFjMTZlNDQ2NWE4ZjVjODU5NjZhNWY1MDk5NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZHlub2NvZGVzIiwiYXVkIjoiZHlub2NvZGVzIiwiYXV0aF90aW1lIjoxNjM5ODQ5MjE3LCJ1c2VyX2lkIjoiTHFBTXB2QXVnZWVMMTZnWUVwUzlQRk5rampoMSIsInN1YiI6IkxxQU1wdkF1Z2VlTDE2Z1lFcFM5UEZOa2pqaDEiLCJpYXQiOjE2Mzk4NDkyMTcsImV4cCI6MTYzOTg1MjgxNywiZW1haWwiOiJkdmdodWxlMTIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkdmdodWxlMTIxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.b1c8Criw555zvzea1ZDoPZV6IvWKdsCDARGfaxH5CudQkJvaet1H-7kM6alJV0o7AeZ7FXzRg_TlgAa1kvpWI3Va9InDMFe2QXDtCOo3-R3PEfS-ADNoiPrNjoesq9boY9QcTdjQS937q1we7WrUvOT78gVcG6R14N_KLvz6gpOv2sS1y03vRzmsKruZWWRqnq6mjnhMRuFb17dQtljZAiQb2W0BKZgwUMk6IlGrtQ98HoT8YI76vjwcH349dGj8L29foEeYaS3v_2vq7IGtT2-7aO_p10euLRdQfT9s7sCIvUaGSV9ZFZ4knt9_pwqwgOjq0uvyy_Z4ekYXfp-9xw"
-      ],
-      "imgs_names": [
-        "138829209-34289e96-84db-4b34-82d4-325d8a620f5e.jpg",
-        "138829167-0ece381b-4941-45c4-a971-e25b0896b1b9 (1).jpg",
-        "138829187-66fba19b-6ff6-483c-8aaa-4637df4ea8b4.jpg"
-      ],
-      "libs": [
-        "Android",
-        "Python",
-        "java",
-        "tkinter",
-        "--",
-        "--"
-      ],
-      "link": "https://github.com/dvghule121/Coder-s-library/releases/download/android/Coder.sLibrary.apk",
-      "name": "Coder's library",
-      "yt": ""
-    }
+
   ]
 }

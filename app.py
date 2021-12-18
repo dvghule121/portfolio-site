@@ -15,12 +15,6 @@ except:
 
 app = Flask(__name__)
 
-uploads_dir = os.path.join(app.instance_path, 'uploads')
-
-
-@app.route('/test')
-def testpage():
-    pass
 
 
 @app.route('/form')
@@ -45,7 +39,6 @@ def details(name):
 @app.route('/')
 def start():
     data = Operator.loadData()
-    print(data)
     if data != None:
         return render_template("index.html", data=data, length=len(data))
     else:
@@ -167,6 +160,7 @@ def success():
         f = request.files['file']
         f.save("2.png")
         return render_template("success.html", name=f.filename)
+
 @app.route('/msg', methods=['POST'])
 def msgin():
     if request.method == 'POST':

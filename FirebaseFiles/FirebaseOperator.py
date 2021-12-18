@@ -37,7 +37,14 @@ class FirebaseOperatorClass:
         pass
 
     def loadData(self):
-        Data = file_contents["items"]
+        try:
+            self.ref = db.reference("/items")
+            self.projects = self.ref.get()
+            Data = self.projects
+
+
+        except:
+            Data = file_contents["items"]
         return Data
 
     def addProject(self, project):
