@@ -44,7 +44,7 @@ def details(name):
 
 @app.route('/')
 def start():
-    data = Operator.loadData(ver="offline")
+    data = Operator.loadData()
     print(data)
     if data != None:
         return render_template("index.html", data=data, length=len(data))
