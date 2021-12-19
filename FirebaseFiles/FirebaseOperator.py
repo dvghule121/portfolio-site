@@ -34,23 +34,20 @@ def isinlist(name, itemlist):
 
 class FirebaseOperatorClass:
     def __init__(self):
-        pass
-
-    def loadData(self):
         try:
             self.ref = db.reference("/items")
             self.projects = self.ref.get()
-            Data = self.projects
+            self.Data = self.projects
 
 
         except:
-            Data = file_contents["items"]
-        return Data
+            self.Data = file_contents["items"]
+
+
+    def loadData(self):
+        return self.Data
 
     def addProject(self, project):
-        self.ref = db.reference("/items")
-        self.projects = self.ref.get()
-
         itemlist = self.projects
         if itemlist != None:
             a, p = isinlist(project["name"], itemlist)
@@ -75,8 +72,6 @@ class FirebaseOperatorClass:
     def remove_project(self, index):
         print("index", index)
         if index != None:
-            self.ref = db.reference("/items")
-            self.projects = self.ref.get()
             index_to_remove = int(index)
             itemlist = self.projects
 

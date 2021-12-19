@@ -6,7 +6,6 @@ from flask import Flask, request, render_template, redirect
 import FirebaseFiles.FirebaseOperator as fo
 import FirebaseFiles.pyrebaseApp as imgsaver
 
-
 try:
     Operator = fo.FirebaseOperatorClass()
 
@@ -14,7 +13,6 @@ except:
     pass
 
 app = Flask(__name__)
-
 
 
 @app.route('/form')
@@ -42,7 +40,7 @@ def start():
     if data != None:
         return render_template("index.html", data=data, length=len(data))
     else:
-        return render_template("index.html", data=data,length=0, this="Project name")
+        return render_template("index.html", data=data, length=0, this="Project name")
 
 
 @app.route("/form", methods=["GET", "POST"])
@@ -78,12 +76,10 @@ def add_project():
                 imgs[i].save(filename_save_)
                 imgtoFB = imgsaver.FBstorage()
                 url = imgtoFB.saveImage(filename_save_, img_name)
-                time.sleep(4)
                 os.remove(filename_save_)
-                print('removed')
-
                 img_list.append(url)
                 imgs_names.append(img_name)
+
             else:
                 img_list.append("")
                 imgs_names.append("")
@@ -94,7 +90,6 @@ def add_project():
         img.save(filename_save)
         imgtoFB = imgsaver.FBstorage()
         url_profile = imgtoFB.saveImage(filename_save, img.filename)
-        time.sleep(4)
         os.remove(filename_save)
 
         project = {"name": name,
@@ -132,7 +127,7 @@ def rem_project_page():
         pr_name = i["name"]
         name_list.append(pr_name)
 
-    return render_template("remove_project.html", name_list=name_list, len= len(name_list))
+    return render_template("remove_project.html", name_list=name_list, len=len(name_list))
 
 
 @app.route("/remove-project", methods=["GET", "POST"])
@@ -161,6 +156,7 @@ def success():
         f.save("2.png")
         return render_template("success.html", name=f.filename)
 
+
 @app.route('/msg', methods=['POST'])
 def msgin():
     if request.method == 'POST':
@@ -168,9 +164,9 @@ def msgin():
         email = request.form["email"]
         msgs = request.form["subject"]
 
-        msg = {"name":name,
-               "email":email,
-               "msg":msgs}
+        msg = {"name": name,
+               "email": email,
+               "msg": msgs}
 
         try:
             Operator.addmsg(msg)
@@ -182,5 +178,4 @@ def msgin():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
-
+    app.run(debug=True, port=8000)
