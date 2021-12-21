@@ -1,8 +1,7 @@
-import json
 import os
-import time
 
 from flask import Flask, request, render_template, redirect
+
 import FirebaseFiles.FirebaseOperator as fo
 import FirebaseFiles.pyrebaseApp as imgsaver
 
@@ -20,6 +19,20 @@ def upload():
     return render_template("form.html")
 
 
+@app.route('/form-b')
+def upload_():
+    return render_template("blogwriting.html")
+
+
+@app.route('/test/<name>')
+def test(name):
+    data = Operator.load_blog()
+    itemList = data[name]
+    print(data)
+
+    return render_template("blog.html", name=itemList)
+
+
 @app.route('/details/<name>', methods=["GET", "POST"])
 def details(name):
     data = Operator.loadData()
@@ -34,11 +47,19 @@ def details(name):
     return render_template("project-detail.html", name=project_dict)
 
 
+
 @app.route('/')
 def start():
     data = Operator.loadData()
+    blogs = Operator.load_blog()
+    blogs_list = list()
+    for i in blogs:
+        blogs_list.append(blogs[i])
+
+
+    print(blogs_list)
     if data != None:
-        return render_template("index.html", data=data, length=len(data))
+        return render_template("index.html", data=data, blog=blogs_list, length=len(data))
     else:
         return render_template("index.html", data=data, length=0, this="Project name")
 
@@ -139,6 +160,67 @@ def rem_project():
 
         if password == "2006":
             Operator.remove_project(name)
+            return redirect("/#pr-pg")
+
+        else:
+            msg = "cant add project please Type correct password "
+            return render_template("success.html", name=name, msg=msg)
+
+        # msg = "cant add project some internal error happpened"
+        # return render_template("success.html", name=name, msg=msg)
+
+
+@app.route("/form-b", methods=["GET", "POST"])
+def addBlog():
+    if request.method == "POST":
+        name = request.form["heading"]
+        main_disk = request.form["main-disc"]
+
+        head_1 = request.form["sub-1-name"]
+        disc_1 = request.form["sub-1-disc"]
+
+        head_2 = request.form["sub-2-name"]
+        disc_2 = request.form["sub-2-disc"]
+
+        head_3 = request.form["sub-3-name"]
+        disc_3 = request.form["sub-3-disc"]
+
+        head_4 = request.form["sub-4-name"]
+        disc_4 = request.form["sub-4-disc"]
+
+        lib_1 = request.form["lib-1"]
+        lib_2 = request.form["lib-2"]
+        lib_3 = request.form["lib-3"]
+        lib_4 = request.form["lib-4"]
+
+        img = request.form["img-link"]
+
+
+
+
+        password = request.form["pass"]
+
+        blog = {
+            "name":name,
+            "main_disk":main_disk,
+            "img":img,
+            "sub_topics":[
+                {"name":head_1,
+                 "para":disc_1},
+                {"name": head_2,
+                 "para": disc_2},
+                {"name": head_3,
+                 "para": disc_3},
+                {"name": head_4,
+                 "para": disc_4}
+
+            ],
+            "topics":[lib_1,lib_2,lib_3,lib_4]
+        }
+
+
+        if password == "2006":
+            Operator.add_blog(blog)
             return redirect("/#pr-pg")
 
         else:

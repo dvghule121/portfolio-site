@@ -61,7 +61,7 @@
                         <a href="#main">Home</a>
                         <a href="#about">about</a>
                         <a href="#pr-pg">Work</a>
-                        <a href="#">team</a>
+                        <a href="#blog">blogs</a>
                         <a href="#contact">contact</a>
 
 
@@ -158,6 +158,54 @@
 
 
 
+                        </div>
+                    </div>
+                </div>
+
+
+
+                {% endfor %}
+                {% endif %}
+
+
+
+
+
+            </div>
+        </section>
+        <section class="item-centre" style="background-color: white;background-image: url('https://wallpaperaccess.com/full/46504.png');background-size: 100vw;" id="blog">
+            <div class="heading text-head">
+                <h1>Blogs</h1>
+            </div>
+
+            <div class="card-area" id="ca">
+                {% if length == 0:  %}
+                <div class="card-view-add">
+                    <div class="rounded-img-btn"><img
+                                src="https://cdn3.iconfinder.com/data/icons/files-bluetone/64/File_missing_not_found_page-512.png" alt="" height="400px" width="350px">
+                    </div>
+                    <div class="pr-name-add">
+                       
+                        <a href="">
+                            <h1>No blog</h1>
+                        </a>
+                
+                    </div>
+                </div>         
+                
+                {% else %}
+                {% for i in blog %}
+
+                <div class="card-view">
+                    <div class="rounded-img"><a href="test/{{i['name']}}"><img
+                                src="{{i['img']}}" alt="" height="400px" width="350px"></a>
+                    </div>
+                    <div class="pr-name">
+                        <a href="">
+                            <h1>{{i['name']}}</h1>
+                        </a>
+                        <div class="hideable-content" style="visibility: visible;">
+                            <p>{{i['main_disk']}}</p>
                         </div>
                     </div>
                 </div>

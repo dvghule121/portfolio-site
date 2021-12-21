@@ -97,6 +97,19 @@ class FirebaseOperatorClass:
         else:
             return None
 
+
+    def add_blog(self,blog):
+        self.ref = db.reference("/")
+        self.ref.child("blogs").child(blog['name']).set(blog)
+
+
+    def load_blog(self):
+        self.ref = db.reference("/blogs")
+        self.blogs = self.ref.get()
+        return self.blogs
+
+
+
     def addmsg(self,msg):
         self.ref = db.reference("/")
         self.ref.child("msgs").push(msg)

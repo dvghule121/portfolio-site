@@ -13,7 +13,7 @@
 <script>
 
 
-var slideIndex = 0;
+    var slideIndex = 0;
 
     showSlides(slideIndex);
 
@@ -42,7 +42,7 @@ var slideIndex = 0;
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        
+
     }
 
     var slideIndex = 0;
@@ -67,48 +67,42 @@ var slideIndex = 0;
 
 
 <style>
-    body{
+    header{
+        position: relative;
+        z-index: 10;
+    }
+    body {
         background-image: url("{{url_for('static', filename= 'styles/images/5445736-fly-and-spin-through-space-less-stars-no-clouds-or-space-dust-transparent-stars-background-1920_1080_preview (1).png' )}}");
-          } 
+    }
+
     .wrapper {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        
 
     }
 
     .i1 {
         display: block;
-        
+
 
 
 
     }
 
-    .images-scroll {
-        display: flex;
-        height: 70vh;
-        gap: 35vh;
-        max-width: 90vw;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column-reverse;
-        flex-wrap: nowrap;
-        overflow: inherit;
-
-        
-        
-    }
 
 
     .project-info {
-        padding-top: 10vh;
+        margin-top: -100vh;
         display: flex;
         justify-content: normal;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        z-index: 0;
+        bottom: 20vh;
         width: 90vw;
         /* background: red; */
         padding-bottom: 10vh;
@@ -118,23 +112,25 @@ var slideIndex = 0;
         /* background-image: url("https://1.bp.blogspot.com/-CKrmdP0QxWw/X4G-dz1x8RI/AAAAAAAAbus/9SsEgs06wGQzHHOuVDlP1uIZMYv4cSSpACLcBGAsYHQ/s16000/amoled-cute-astronaut-HD.png");
      
        */
-       background-size: 100vw 100vw;
-       background-repeat: repeat-y;
-       margin-bottom: 5vh;
-      
+        background-size: 100vw 100vw;
+        background-repeat: repeat-y;
+        margin-bottom: 5vh;
+
 
     }
 
     .project-discription {
-        margin: 5vw 5vw 10vh;
+        margin: 10vh 0 10vh;
         font-family: cursive;
+        width: 70vw;
         white-space: pre-line;
         border: black dashed;
-        padding: 2vh 5vw;
+        padding: 1vh 5vw;
         background: white;
         box-sizing: border-box;
         box-shadow: 15px 15px 25px 0px #000000a6;
         position: relative;
+        z-index: 10;
 
 
     }
@@ -148,14 +144,14 @@ var slideIndex = 0;
         margin: 7vh 0 5vh 0;
         /* top: 0.7vh;
         width: 70vw; */
-       
-        
-       
+
+
+
     }
 
     .project-name h1 {
         margin-top: 4vh;
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         font-family: "Fizzy bubbles", cursive;
         font-size: xx-large;
     }
@@ -178,10 +174,10 @@ var slideIndex = 0;
         height: 70vh;
         width: 70vw;
         padding: 0 4vh;
-       
+
         background: rgba(255, 255, 255, 0);
         background-size: 100%;
-            box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.219), 0 15px 10px 0 rgba(0, 0, 0, 0.219);
+        box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.219), 0 15px 10px 0 rgba(0, 0, 0, 0.219);
     }
 
     .used-langs-page {
@@ -221,7 +217,7 @@ var slideIndex = 0;
         color: rgb(255, 255, 255);
         font-size: 1.5vw;
         box-shadow: 15px 15px 10px 0 rgb(0 0 0 / 22%);
-        font-family:cursive, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        font-family: cursive, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
 
     .heading {
@@ -229,15 +225,15 @@ var slideIndex = 0;
         justify-content: center;
         font-family: "Poppins";
         font-size: larger;
-        margin:2vh 0;
+        margin: 2vh 0;
         width: 100%;
         align-items: center;
         color: white;
-        
+
 
     }
 
-   
+
 
     .links-big {
         display: flex;
@@ -245,7 +241,7 @@ var slideIndex = 0;
         flex-wrap: wrap;
         justify-content: center;
         padding: 3vh;
-    gap: 2vw;
+        gap: 2vw;
     }
 
     .links-big img {
@@ -254,134 +250,46 @@ var slideIndex = 0;
         height: 100px;
         border-radius: 0px;
     }
-
-
-
-    .btn-l {
-        display: flex;
-        /* flex-direction: row; */
-        margin: 0 3vw;
-        border: none;
-        font-family: cursive;
-        background: rgb(71, 234, 255);
-        box-shadow: 15px rgb(7, 7, 7);
-        color: black;
-        font-size: small;
-        /* align-content: center; */
-        justify-content: center;
-
-        height: 50px;
-        width: 20px;
-      
-        outline: none;
-        font-weight: 600;
-
-        z-index: 6;
-        left: -3vw;
-        position: absolute;
+    img{
+        max-width: 100%;
     }
 
-    .btn-r {
-        display: flex;
-        /* flex-direction: row; */
-        margin: 0 3vw;
-        border: none;
-        font-family: cursive;
-        background: rgb(71, 234, 255);
-        box-shadow: 15px rgb(7, 7, 7);
-        color: black;
-        font-size: small;
-        /* align-content: center; */
-        justify-content: center;
 
-        height: 50px;
-        width: 20px;
-       
-        outline: none;
-        font-weight: 600;
-
-        z-index: 6;
-        right: -3vw;
-        position: absolute;
+    .image-area {
+        display: contents;
+        width: 80vw;
+        max-height: 70vh;
     }
 
-    /* .images-scroll {
-
-        display: flex;
+    .blogimg img{
+        position: relative;
+        z-index: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .bloginfo{
+        position: relative;
+        height: 100vh;
         width: 100%;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        overflow: scroll;
-    } */
-
-
-.images-scroll img {
-       
-    width: 100%;
-    /* height: 100%; */
-    max-height: 70vh;
-    max-width: 70vw;
-       
-        
-
+        z-index: 0;
+        bottom: 101vh;
+        display: flex;
+        padding: 10vh 15vw;
+        background: rgba(0, 0, 0, 0.550);
+    }
+    .blog-heading h1{
+        font-size: 10vh;
+        color: white;
+    }
+    .blog-heading{
+        padding: 3vw;
+    }
+    .blog-heading p{
+        margin-top: 10vh;
+        width: 50vw;
     }
 
-    .images-area{
-    display: contents;
-    width: 80vw;
-    max-height: 70vh;
-}
-
-
-
-    /* =============================================== */
-    /* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  position: relative;
-  z-index: 5;
-  top: 5vh;
-}
-
-.active, .dot:hover {
-  background-color: #666666;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
-.image-area{
-    display: contents;
-    width: 80vw;
-    max-height: 70vh;
-}
-
-
+    
 </style>
 
 <body>
@@ -413,100 +321,67 @@ var slideIndex = 0;
 
 
         <section class="wrapper">
-            <div><div class="project-image">
-                <div>
-                    <button class="btn-l" onclick="plusSlides(-1)">
-                        <h1> < </h1>
-                    </button>
-                </div>
-                <div class="images-area">
-                <div class="images-scroll">
-
-                    <div class="i1 fade"> <img  src="{{name['imgs'][0]}}" alt="">
-                    </div>
-                    <div class="i1 fade"> <img  src="{{name['imgs'][1]}}" alt="">
-                    </div>
-                    <div class="i1 fade"> <img src="{{name['imgs'][2] }}" alt="">
-                    </div>
-
-                </div>
-            </div>
-
-                <div>
-                    <button class="btn-r" onclick="plusSlides(1)">
-                        <h1>></h1>
-                    </button>
-                </div></div>
-
-            
-                <!-- The dots/circles -->
-            <div style="    text-align: center;
-            display: block;
-            position: relative;
-            z-index: 6;
-            top: 7.5vh;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
+            <div class="blogimg">
+                <img src="{{name['img']}}" alt="">
                 
             </div>
-            
+            <div class="bloginfo">
+                <div class="blog-heading" style="font-family: 'Poppins',san-serif;color: rgb(255, 255, 255);">
+                    <h1>{{name['name']}}</h1>
+                   <p>{{name['main_disk']}}</p>
+                </div>
+            </div>
 
 
             <div class="project-info flex">
-                <div class="project-name" style="font-family: 'Poppins',san-serif;color: white;">
-                    <h1>{{name["name"]}}</h1>
-                </div>
-                <div class="project-discription">
-                    <p>  {{"  "+name["desc"]}}</p>
-                    <br><br><br>
+                <div class="project-discription">               
+                    {% for i in name["sub_topics"] %}
+                    <div class="" style="font-family: 'Poppins',san-serif;color: rgb(0, 0, 0);">
+                        <h1>{{i["name"]}}</h1>
+                    </div>
+                    <p>{{i["para"]}}</p>
+                    {% endfor %}
                 </div>
 
                 <div class="used-langs-page">
                     <div class="heading">
-                        <h1>Used languages and libraries and area of development</h1>
+                        <h1>Topics</h1>
                     </div>
                     <div class="used-langs">
                         <div class="lang-card">
-                            <h1>{{name["libs"][0]}}</h1>
+                            <h1>{{name["topics"][0]}}</h1>
                         </div>
                         <div class="lang-card">
-                            <h1>{{name["libs"][1]}}</h1>
+                            <h1>{{name["topics"][1]}}</h1>
                         </div>
                         <div class="lang-card">
-                            <h1>{{name["libs"][2]}}</h1>
+                            <h1>{{name["topics"][2]}}</h1>
                         </div>
                         <div class="lang-card">
-                            <h1>{{name["libs"][3]}}</h1>
-                        </div>
-                        <div class="lang-card">
-                            <h1>{{name["libs"][4]}}</h1>
-                        </div>
-                        <div class="lang-card">
-                            <h1>{{name["libs"][5]}}</h1>
+                            <h1>{{name["topics"][3]}}</h1>
                         </div>
                     </div>
 
 
                 </div>
 
-                
+
 
                 <div class="used-langs-page">
                     <div class="heading">
-                        <h1>project links</h1>
+                        <h1>links</h1>
                     </div>
                     <div class="links-big">
-                        <a href="{{name['gitrepo']}}"><img
+                        <!-- <a href="{{name['gitrepo']}}"><img
                                 src="{{url_for('static', filename='styles/images/Projects/git-icon.png')}}"
-                                alt="github"></a>
+                                alt="github"></a> -->
                         <a href="{{name['yt']}}"><img
                                 src="{{url_for('static', filename='styles/images/Projects/YouTube.png')}}" alt=""></a>
                     </div>
 
                 </div>
             </div>
+        </div>
 
 
         </section>
@@ -518,7 +393,9 @@ var slideIndex = 0;
     <footer>
         <div class="footer-content">
             <h3>DynoCodes</h3>
-            <p style="text-align: left;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">DynoCodes is a blog website where you will find great Information on web design, Android, Machine
+            <p
+                style="text-align: left;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                DynoCodes is a blog website where you will find great Information on web design, Android, Machine
                 Learning, Ai and amazing projects. Here each project and concepts are beautifully described step by step
                 with the required source code.</p>
             <ul class="socials">
