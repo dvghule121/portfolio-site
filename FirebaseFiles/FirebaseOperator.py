@@ -63,7 +63,7 @@ class FirebaseOperatorClass:
             itemlist = []
             itemlist.append(project)
 
-        self.ref.set(itemlist)
+        db.reference("/items").set(itemlist)
         self.projects = self.ref.get()
 
         with open("FirebaseFiles/data/projects.json", "w") as f:
@@ -83,7 +83,7 @@ class FirebaseOperatorClass:
             itemlist.pop(index_to_remove)
             print("mission succesful", itemlist)
             try:
-                self.ref.set(itemlist)
+                db.reference("/items").set(itemlist)
                 self.projects = self.ref.get()
             except:
                 with open("FirebaseFiles/data/projects.json", "w") as f:
@@ -99,8 +99,8 @@ class FirebaseOperatorClass:
 
 
     def add_blog(self,blog):
-        self.ref = db.reference("/")
-        self.ref.child("blogs").child(blog['name']).set(blog)
+        self.ref = db.reference("/blogs")
+        self.ref.child(blog['name']).set(blog)
 
 
     def load_blog(self):

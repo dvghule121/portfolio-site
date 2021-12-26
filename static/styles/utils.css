@@ -38,7 +38,7 @@
     height: 400px;
     margin: 2rem;
     border-radius: 15px;
-    box-shadow: 0 20px  15px 0 rgba(0, 0, 0, 0.219), 0 20px  15px 0 rgba(0, 0, 0, 0.219);
+   
     scrollbar-width: thin;
 
 }
