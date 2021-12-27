@@ -288,6 +288,9 @@ button{
         max-width: 90vw;
         overflow: hidden;
     }
+    .contentContainer {
+        width: 80vw;
+    }
 
 
    .card iframe{
