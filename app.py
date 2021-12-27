@@ -13,6 +13,9 @@ except:
 
 app = Flask(__name__)
 
+@app.route('/cv')
+def mycv():
+    return render_template('cv.html')
 
 @app.route('/form')
 def upload():

@@ -516,6 +516,81 @@ footer {
     }
 
 
+    .yt-videos-card-area{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 85vw;
+    box-shadow: 0px 0px  20px 10px rgba(0, 0, 0, 0.219);
+    overflow-x: hidden;
+    min-height: 20vh;
+    background: white;
+    }
+
+    .card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25vw;
+    margin: 0 2.5565vw;
+    }
+
+    
+    .btn-l {
+        display: flex;
+        /* flex-direction: row; */
+        margin: 0 3vw;
+        border: none;
+        font-family: cursive;
+        color: rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
+        box-shadow: 15px rgb(7, 7, 7);
+        font-size: small;
+        /* align-content: center; */
+        justify-content: center;
+
+      
+        outline: none;
+        font-weight: 600;
+        height: 10vh;
+        width: 5vw;
+        align-items: center;
+
+        z-index: 6;
+        left:4vw;
+        position: absolute;
+    }
+
+    .btn-r {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: row; */
+        margin: 0 3vw;
+        border: none;
+        font-family: "Poppins";
+
+        
+        box-shadow: 15px rgb(7, 7, 7);
+        color: rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
+        font-size: small;
+        /* align-content: center; */
+        justify-content: center;
+
+       
+        outline: none;
+        font-weight:bolder;
+        height: 10vh;
+        width: 5vw;
+
+        z-index: 6;
+        right: 3.9vw;
+        position: absolute;
+    }
+
+
+
 
 
 

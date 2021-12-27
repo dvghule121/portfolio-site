@@ -17,9 +17,53 @@
         var car;
 
 
+    }
 
+
+    var slideIndex = 0;
+
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("card");
+        if (n >= slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
 
     }
+
+    var slideIndex = 0;
+    showSlidesrep();
+
+    function showSlidesrep() {
+        var i;
+        var slides = document.getElementsByClassName("i1");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+
+    showSlidesrep()
+
 
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -82,7 +126,7 @@
                 </div>
                 <div class="button">
                     <Button class="btn" onclick="javascript:window.location.href='#about'">about me</Button>
-                    <Button class="btn" onclick="javascript:window.location.href='#mycv'">My cv</Button>
+                    <Button class="btn" onclick="javascript:window.location.href='/cv'">My cv</Button>
                 </div>
 
             </div>
@@ -174,6 +218,53 @@
 
             </div>
         </section>
+        <section class=""
+            style="height:120vh;background-image: url('https://wallpapercave.com/wp/wp7620511.jpg');background-size: 100% 100%;">
+            <div class="heading text-head" style="color: whitesmoke;">
+                <h1>YouTube</h1>
+            </div>
+            <div class="card-area">
+                <div class="yt-videos-card-area">
+                    <div>
+                        <button class="btn-l" onclick="plusSlides(-1)">Prev</button>
+                    </div>
+                    <div class="card" style="display: flex;width:100%;align-items: center;
+                    justify-content: center;
+                    align-content: center;">
+                        <iframe class="responsive" style="width:75vw;height: 75vh; margin: 2.5vw;"
+                            src="https://www.youtube.com/embed/wQq-R4X8p2Q" title="YouTube video player"  frameborder="0"
+                            ></iframe>
+                    </div>
+
+                    <div class="card" style="display: flex;width:100%;align-items: center;
+                justify-content: center;
+                align-content: center;">
+                        <iframe class="responsive" style="width:75vw;height: 75vh; margin: 2.5vw;"
+                            src="https://www.youtube.com/embed/MQuegjy4HFE" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="card" style="display: flex;width:100%;align-items: center;
+                justify-content: center;
+                align-content: center;">
+                        <iframe class="responsive" style="width:75vw;height: 75vh; margin: 2.5vw;"
+                            src="https://www.youtube.com/embed/yKwN28ykp-A" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+
+                </div>
+
+                <div>
+                    <button class="btn-r" onclick="plusSlides(1)">Next</button>
+                </div>
+            </div>
+            </div>
+
+        </section>
         <section class="item-centre"
             style="background-color: white;background-image: url('https://wallpaperaccess.com/full/46504.png');background-size: 100vw;"
             id="blog">
@@ -237,7 +328,8 @@
                 </div>
                 <div class="used-langs">
                     <div class="lang-card-i">
-                       <img src="https://icons-for-free.com/iconfiles/png/512/bxl+c+plus+plus-1325051931431540241.png" alt="">
+                        <img src="https://icons-for-free.com/iconfiles/png/512/bxl+c+plus+plus-1325051931431540241.png"
+                            alt="">
                     </div>
                     <div class="lang-card-i">
                         <img src="https://logos-world.net/wp-content/uploads/2021/08/Android-Logo.png" alt="">
@@ -249,7 +341,8 @@
                         <h1><img src="https://cdn-icons-png.flaticon.com/512/2252/2252079.png" alt=""></h1>
                     </div>
                     <div class="lang-card-i">
-                       <img src="https://thumbs.dreamstime.com/b/deep-learning-icon-industry-collection-simple-line-element-symbol-templates-web-design-infographics-175041693.jpg" alt="">
+                        <img src="https://thumbs.dreamstime.com/b/deep-learning-icon-industry-collection-simple-line-element-symbol-templates-web-design-infographics-175041693.jpg"
+                            alt="">
                     </div>
 
                     <div class="lang-card-i">

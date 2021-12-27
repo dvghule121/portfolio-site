@@ -306,6 +306,13 @@ button{
     }
 
 }
+
+.btn-l, .btn-r {
+    font-size: smaller;
+    font-weight: bolder;
+    height: 10vh;
+    width: 5vw;
+}
 a{
     text-decoration: none;
     color: unset;
