@@ -38,7 +38,7 @@
     height: 400px;
     margin: 2rem;
     border-radius: 15px;
-   
+    box-shadow: 15px 15px  15px 0px rgba(0, 0, 0, 0.3), 0 20px  15px 10px rgba(0, 0, 0, 0.219);
     scrollbar-width: thin;
 
 }
@@ -126,7 +126,8 @@
   
     
     background-image: url("images/newimage.png");
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .rounded-img img {
@@ -535,6 +536,11 @@ footer {
     margin: 0 2.5565vw;
     }
 
+    .card iframe{
+        width:75vw;height: 75vh; margin: 2.5vw;
+        
+    }
+
     
     .btn-l {
         display: flex;
@@ -545,7 +551,7 @@ footer {
         color: rgb(255, 255, 255);
         background: rgb(0, 0, 0);
         box-shadow: 15px rgb(7, 7, 7);
-        font-size: small;
+        font-size: larger;
         /* align-content: center; */
         justify-content: center;
 
@@ -568,13 +574,13 @@ footer {
         /* flex-direction: row; */
         margin: 0 3vw;
         border: none;
-        font-family: "Poppins";
+        font-family: cursive;
 
         
         box-shadow: 15px rgb(7, 7, 7);
         color: rgb(255, 255, 255);
         background: rgb(0, 0, 0);
-        font-size: small;
+        font-size: larger;
         /* align-content: center; */
         justify-content: center;
 

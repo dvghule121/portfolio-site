@@ -289,7 +289,10 @@ button{
         overflow: hidden;
     }
 
-   
+
+   .card iframe{
+       height: 50vh;
+   }
     .rounded-img img{
         width: 100%;
     }
@@ -307,12 +310,7 @@ button{
 
 }
 
-.btn-l, .btn-r {
-    font-size: smaller;
-    font-weight: bolder;
-    height: 10vh;
-    width: 5vw;
-}
+
 a{
     text-decoration: none;
     color: unset;
