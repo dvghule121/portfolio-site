@@ -15,7 +15,7 @@ default_app = firebase_admin.initialize_app(cred_obj, {
 })
 # default_app = firebase_admin.initialize_app()
 
-with open("FirebaseFiles/data/projects.json", "r") as f:
+with open("FirebaseFiles/data/projects.json", "r", errors='ignore') as f:
     file_contents = json.load(f)
 
 

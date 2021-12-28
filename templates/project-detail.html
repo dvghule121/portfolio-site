@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 <title>DynoCodes</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/utils.css') }}">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
@@ -131,10 +132,12 @@ var slideIndex = 0;
         white-space: pre-line;
         border: black dashed;
         padding: 2vh 5vw;
+        white-space: pre-line;
         background: white;
         box-sizing: border-box;
         box-shadow: 15px 15px 25px 0px #000000a6;
         position: relative;
+
 
 
     }
@@ -458,7 +461,7 @@ var slideIndex = 0;
                 <div class="project-name" style="font-family: 'Poppins',san-serif;color: white;">
                     <h1>{{name["name"]}}</h1>
                 </div>
-                <div class="project-discription">
+                <div class="project-discription" style="white-space: pre-line;">
                     <p>  {{"  "+name["desc"]}}</p>
                     <br><br><br>
                 </div>
