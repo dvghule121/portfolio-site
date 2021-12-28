@@ -184,10 +184,11 @@
                 {% for i in range(length) %}
 
                 <div class="card-view">
-                    <div class="rounded-img"><a href="/details/{{data[i]['name']}}"><img src="{{ data[i]['img']}}"
+                    <div class="rounded-img"><a href="/projects/{{data[i]['name']}}"><img src="{{ data[i]['img']}}"
                                 alt="" height="400px" width="350px"></a>
                     </div>
-                    <div class="pr-name">
+                    <div class="share-img-opt"><a href="\share\projects\{{data[i]['name']}}"><img src="https://purepng.com/public/uploads/large/share-icon-7nl.png" alt="" height="25px" width="25px"></a></div>
+                    <div class="pr-name b">
                         <a href="{{data[i]['link']}}">
                             <h1>{{data[i]['name']}}</h1>
                         </a>
@@ -295,10 +296,12 @@
                 {% for i in blog %}
 
                 <div class="card-view">
-                    <div class="rounded-img"><a href="test/{{i['name']}}"><img src="{{i['img']}}" alt="" height="400px"
+                    <div class="rounded-img"><a href="blogs/{{i['name']}}"><img src="{{i['img']}}" alt="" height="400px"
                                 width="350px"></a>
                     </div>
-                    <div class="pr-name">
+                    <div class="share-img-opt"><a href="share/blogs/{{i['name']}}"><img src="https://purepng.com/public/uploads/large/share-icon-7nl.png" alt="" height="25px" width="25px"></a></div>
+
+                    <div class="pr-name b" >
                         <a href="">
                             <h1>{{i['name']}}</h1>
                         </a>

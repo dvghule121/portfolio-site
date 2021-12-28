@@ -162,11 +162,19 @@ button{
 
 .card-view:hover .pr-name{
     min-height: 250px;
-    top: -254px;
+    top: -283px;
     justify-content: unset;
     background-color: rgba(0, 0, 0, 0.767);
  
 
+}
+
+.share-img-opt{
+    position: relative;
+    bottom: 395px;
+    right: -315px;
+    max-width: 20px;
+    
 }
 
 .hideable-content{

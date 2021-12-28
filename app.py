@@ -17,6 +17,14 @@ app = Flask(__name__)
 def mycv():
     return render_template('cv.html')
 
+@app.route('/share/<p_b>/<blog>')
+def share(p_b,blog):
+    title = blog
+    summary = 'Read this amazing blog by Dynocodes \n' + 'https://dynocodes.herokuapp.com/test/' + blog
+    link = f'https://dynocodes.herokuapp.com/{p_b}/{blog}'
+    all_wrapped = { "summary":summary,"link":link, "title":title}
+    return render_template('share.html',cont = all_wrapped)
+
 @app.route('/form')
 def upload():
     return render_template("form.html")
@@ -27,7 +35,7 @@ def upload_():
     return render_template("blogwriting.html")
 
 
-@app.route('/test/<name>')
+@app.route('/blogs/<name>')
 def test(name):
     data = Operator.load_blog()
     itemList = data[name]
@@ -36,7 +44,7 @@ def test(name):
     return render_template("blog.html", name=itemList)
 
 
-@app.route('/details/<name>', methods=["GET", "POST"])
+@app.route('/projects/<name>', methods=["GET", "POST"])
 def details(name):
     data = Operator.loadData()
     itemList = data
