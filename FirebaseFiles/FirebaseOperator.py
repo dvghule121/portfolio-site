@@ -22,12 +22,15 @@ with open("FirebaseFiles/data/projects.json", "r", errors='ignore') as f:
 def isinlist(name, itemlist):
     a = False
     p = 0
-    for n, i in enumerate(itemlist):
+    try:
+        for n, i in enumerate(itemlist):
 
-        if i["name"] == name:
-            a = True
-            p = n
-            break
+            if i["name"] == name:
+                a = True
+                p = n
+                break
+    except:
+        pass
 
     return a, p
 
@@ -74,6 +77,7 @@ class FirebaseOperatorClass:
         if index != None:
             index_to_remove = int(index)
             itemlist = self.projects
+            print(itemlist,len(itemlist))
 
             imgs_list = itemlist[index_to_remove]["imgs_names"]
             for i in imgs_list:
