@@ -46,6 +46,10 @@ class FBstorage:
       except:
         return -1
 
+  def authenticate_admin(self):
+    user = auth.sign_in_with_email_and_password(email, password)
+
+
 
 
 

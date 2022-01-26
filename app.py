@@ -61,6 +61,7 @@ def details(name):
 
 @app.route('/')
 def start():
+    imgsaver.FBstorage.authenticate_admin()
     data = Operator.loadData()
     blogs = Operator.load_blog()
     blogs_list = list()
@@ -104,11 +105,8 @@ def add_project():
         for i in range(3):
             if imgs[i].filename != "":
                 img_name = imgs[i].filename
-                filename_save_ = "static/styles/images/Projects/" + imgs[i].filename
-                imgs[i].save(filename_save_)
                 imgtoFB = imgsaver.FBstorage()
-                url = imgtoFB.saveImage(filename_save_, img_name)
-                os.remove(filename_save_)
+                url = imgtoFB.saveImage(imgs[i], img_name)
                 img_list.append(url)
                 imgs_names.append(img_name)
 
@@ -118,11 +116,9 @@ def add_project():
 
         lib_list = [lib_1, lib_2, lib_3, lib_4, lib_5, lib_6]
 
-        filename_save = "static/styles/images/Projects/" + img.filename
-        img.save(filename_save)
+
         imgtoFB = imgsaver.FBstorage()
-        url_profile = imgtoFB.saveImage(filename_save, img.filename)
-        os.remove(filename_save)
+        url_profile = imgtoFB.saveImage(img, img.filename)
 
         project = {"name": name,
                    "desc": description,
