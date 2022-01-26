@@ -70,12 +70,13 @@ var slideIndex = 0;
 <style>
     body{
         background-image: url("{{url_for('static', filename= 'styles/images/5445736-fly-and-spin-through-space-less-stars-no-clouds-or-space-dust-transparent-stars-background-1920_1080_preview (1).png' )}}");
-          } 
+     } 
     .wrapper {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        width: 100%;
 
     }
 
@@ -128,7 +129,7 @@ var slideIndex = 0;
 
     .project-discription {
         margin: 5vw 5vw 10vh;
-        font-family: "Fuzzy bubbles";
+        font-family: monospace;
         white-space: pre-line;
         border: black dashed;
         padding: 2vh 5vw;
@@ -384,6 +385,18 @@ var slideIndex = 0;
     max-height: 70vh;
 }
 
+@media screen and (max-width:480px) {
+    .project-info{
+        min-width: 100vw;
+    }
+    
+
+    .project-discription{
+        width: 100%;
+        border: none;
+    }
+    
+}
 
 </style>
 
@@ -463,12 +476,14 @@ var slideIndex = 0;
                 </div>
                 <div class="project-discription" style="white-space: pre-line;">
                     <p>  {{"  "+name["desc"]}}</p>
-                    <br><br><br>
+                    <br>
+                    <span style="font-size:x-large; color:blue;text-decoration:underline;"><a href="{{name['link']}}">Project Link</a></span>
+                    <br><br>
                 </div>
 
                 <div class="used-langs-page">
                     <div class="heading">
-                        <h2>Used languages and libraries and area of development</h2>
+                        <h2>Used languages, libraries</h2>
                     </div>
                     <div class="used-langs">
                         <div class="lang-card">

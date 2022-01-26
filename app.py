@@ -61,7 +61,7 @@ def details(name):
 
 @app.route('/')
 def start():
-    imgsaver.FBstorage.authenticate_admin()
+
     data = Operator.loadData()
     blogs = Operator.load_blog()
     blogs_list = list()

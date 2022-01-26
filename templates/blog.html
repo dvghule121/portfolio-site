@@ -121,7 +121,7 @@
 
     .project-discription {
         margin: 10vh 0 10vh;
-        font-family: cursive;
+        font-family: monospace;
         width: 70vw;
         white-space: pre-line;
         border: black dashed;
@@ -274,11 +274,12 @@
         z-index: 0;
         bottom: 101vh;
         display: flex;
-        padding: 10vh 15vw;
-        background: rgba(0, 0, 0, 0.550);
+        padding: 2vh 5vw;
+        background: rgba(0, 0, 0, 0.750);
+        backdrop-filter: blur(3px);
     }
     .blog-heading h1{
-        font-size: 10vh;
+        font-size: xxx-large;
         color: white;
     }
     .blog-heading{
@@ -286,8 +287,36 @@
     }
     .blog-heading p{
         margin-top: 10vh;
+        font-family: monospace;
+        font-size:x-large;
         width: 50vw;
     }
+
+
+@media screen and (max-width:480px) {
+    .project-info{
+        min-width: 100vw;
+    }
+
+    .blog-heading h1{
+     font-size: xx-large;
+    }
+
+    .blog-heading p{
+     font-size:large;
+     font-weight: normal;
+     font-family: monospace;
+     width:80vw;
+    }
+
+
+    .project-discription{
+        width: 100%;
+        border: none;
+    }
+
+}
+
 
     
 </style>
