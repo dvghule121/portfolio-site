@@ -3,10 +3,14 @@
 .nav-bar{
     display: flex;
     flex-wrap: wrap;
+    position: sticky;
     justify-content: space-between;
     padding:2vh 3vw;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffcfdf;
+    background-image: linear-gradient(
+315deg
+, #ffcfdf 0%, #b0f3f1 74%);
     box-shadow: 0 15px  10px 0 rgba(0, 0, 0, 0.219), 0 15px  10px 0 rgba(0, 0, 0, 0.219);
     max-height: 100vw; 
 }
@@ -125,9 +129,9 @@
 .nobg{
   
     
-    background-image: url("images/newimage.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
 }
 
 .rounded-img img {
@@ -632,8 +636,10 @@ footer {
     .contentContainer {
         
         padding:20px;
+        margin-top: 5vh;
         min-width: 40vw;
         border-radius:10px;
+        background: white;
         box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.342);
         margin-bottom: 7vh;
       }
