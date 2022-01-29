@@ -11,10 +11,23 @@
     @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Poppins:wght@600&family=Roboto&display=swap');
 </style>
 
+
+{% block scripts %}
+<script>
+    function setDesc(){
+
+        document.getElementById(1).insertAdjacentHTML("afterbegin", {{name['desc']}});
+
+    }
+    
+</script>
+{% endblock %}
 <script>
 
 
-var slideIndex = 0;
+
+
+    var slideIndex = 0;
 
     showSlides(slideIndex);
 
@@ -43,7 +56,7 @@ var slideIndex = 0;
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        
+
     }
 
     var slideIndex = 0;
@@ -68,9 +81,10 @@ var slideIndex = 0;
 
 
 <style>
-    body{
+    body {
         background-image: url("{{url_for('static', filename= 'styles/images/5445736-fly-and-spin-through-space-less-stars-no-clouds-or-space-dust-transparent-stars-background-1920_1080_preview (1).png' )}}");
-     } 
+    }
+
     .wrapper {
         display: flex;
         justify-content: center;
@@ -82,7 +96,7 @@ var slideIndex = 0;
 
     .i1 {
         display: block;
-        
+
 
 
 
@@ -100,8 +114,8 @@ var slideIndex = 0;
         flex-wrap: nowrap;
         overflow: inherit;
 
-        
-        
+
+
     }
 
 
@@ -120,10 +134,10 @@ var slideIndex = 0;
         /* background-image: url("https://1.bp.blogspot.com/-CKrmdP0QxWw/X4G-dz1x8RI/AAAAAAAAbus/9SsEgs06wGQzHHOuVDlP1uIZMYv4cSSpACLcBGAsYHQ/s16000/amoled-cute-astronaut-HD.png");
      
        */
-       background-size: 100vw 100vw;
-       background-repeat: repeat-y;
-       margin-bottom: 5vh;
-      
+        background-size: 100vw 100vw;
+        background-repeat: repeat-y;
+        margin-bottom: 5vh;
+
 
     }
 
@@ -144,6 +158,10 @@ var slideIndex = 0;
 
     }
 
+    .project-discription ul {
+        padding-left: 50px
+    }
+
     .project-name {
         /* position: relative; */
         /* z-index: 5; */
@@ -153,9 +171,9 @@ var slideIndex = 0;
         margin: 7vh 0 5vh 0;
         /* top: 0.7vh;
         width: 70vw; */
-       
-        
-       
+
+
+
     }
 
     .project-name h1 {
@@ -183,10 +201,10 @@ var slideIndex = 0;
         height: 70vh;
         width: 70vw;
         padding: 0 4vh;
-       
+
         background: rgba(255, 255, 255, 0);
         background-size: 100%;
-            box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.219), 0 15px 10px 0 rgba(0, 0, 0, 0.219);
+        box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.219), 0 15px 10px 0 rgba(0, 0, 0, 0.219);
     }
 
     .used-langs-page {
@@ -226,7 +244,7 @@ var slideIndex = 0;
         color: rgb(255, 255, 255);
         font-size: 1.5vw;
         box-shadow: 15px 15px 10px 0 rgb(0 0 0 / 22%);
-        font-family:cursive, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        font-family: cursive, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
 
     .heading {
@@ -234,15 +252,15 @@ var slideIndex = 0;
         justify-content: center;
         font-family: "Poppins";
         font-size: larger;
-        margin:2vh 0;
+        margin: 2vh 0;
         width: 100%;
         align-items: center;
         color: white;
-        
+
 
     }
 
-   
+
 
     .links-big {
         display: flex;
@@ -250,7 +268,7 @@ var slideIndex = 0;
         flex-wrap: wrap;
         justify-content: center;
         padding: 3vh;
-    gap: 2vw;
+        gap: 2vw;
     }
 
     .links-big img {
@@ -277,7 +295,7 @@ var slideIndex = 0;
 
         height: 50px;
         width: 20px;
-      
+
         outline: none;
         font-weight: 600;
 
@@ -301,7 +319,7 @@ var slideIndex = 0;
 
         height: 50px;
         width: 20px;
-       
+
         outline: none;
         font-weight: 600;
 
@@ -322,83 +340,289 @@ var slideIndex = 0;
     } */
 
 
-.images-scroll img {
-       
-    width: 100%;
-    /* height: 100%; */
-    max-height: 70vh;
-    max-width: 70vw;
-       
-        
+    .images-scroll img {
+
+        width: 100%;
+        /* height: 100%; */
+        max-height: 70vh;
+        max-width: 70vw;
+
+
 
     }
 
-    .images-area{
-    display: contents;
-    width: 80vw;
-    max-height: 70vh;
-}
+    .images-area {
+        display: contents;
+        width: 80vw;
+        max-height: 70vh;
+    }
+
+    < !-- this is html css for text in project description-->
+    /*
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+*/
+
+    body {
+        /* Font */
+        /* Emoji fonts are added to visualise them nicely in Internet Explorer. */
+        font-family: sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 12px;
+
+        /* Text color */
+        color: #333;
+
+        /* Remove the background color to make it transparent. */
+        background-color: #fff;
+
+        margin: 20px;
+    }
+
+    .cke_editable {
+        font-size: 13px;
+        line-height: 1.6;
+
+        /* Fix for missing scrollbars with RTL texts. (#10488) */
+        word-wrap: break-word;
+    }
+
+    blockquote {
+        font-style: italic;
+        font-family: Georgia, Times, "Times New Roman", serif;
+        padding: 2px 0;
+        border-style: solid;
+        border-color: #ccc;
+        border-width: 0;
+    }
+
+    .cke_contents_ltr blockquote {
+        padding-left: 20px;
+        padding-right: 8px;
+        border-left-width: 5px;
+    }
+
+    .cke_contents_rtl blockquote {
+        padding-left: 8px;
+        padding-right: 20px;
+        border-right-width: 5px;
+    }
+
+    a {
+        color: #0782C1;
+    }
+
+    ol,
+    ul,
+    dl {
+        /* IE7: reset rtl list margin. (#7334) */
+        *margin-right: 0px;
+        /* Preserved spaces for list items with text direction different than the list. (#6249,#8049)*/
+        padding: 0 40px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
+        line-height: 1.2;
+    }
+
+    hr {
+        border: 0px;
+        border-top: 1px solid #ccc;
+    }
+
+    img.right {
+        border: 1px solid #ccc;
+        float: right;
+        margin-left: 15px;
+        padding: 5px;
+    }
+
+    img.left {
+        border: 1px solid #ccc;
+        float: left;
+        margin-right: 15px;
+        padding: 5px;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        /* CSS 2.1 */
+        word-wrap: break-word;
+        /* IE7 */
+        -moz-tab-size: 4;
+        tab-size: 4;
+    }
+
+    .marker {
+        background-color: Yellow;
+    }
+
+    span[lang] {
+        font-style: italic;
+    }
+
+    figure {
+        text-align: center;
+        outline: solid 1px #ccc;
+        background: rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        margin: 10px 20px;
+        display: inline-block;
+    }
+
+    figure>figcaption {
+        text-align: center;
+        display: block;
+        /* For IE8 */
+    }
+
+    a>img {
+        padding: 1px;
+        margin: 1px;
+        border: none;
+        outline: 1px solid #0782C1;
+    }
+
+    /* Widget Styles */
+    .code-featured {
+        border: 5px solid red;
+    }
+
+    .math-featured {
+        padding: 20px;
+        box-shadow: 0 0 2px rgba(200, 0, 0, 1);
+        background-color: rgba(255, 0, 0, 0.05);
+        margin: 10px;
+    }
+
+    .image-clean {
+        border: 0;
+        background: none;
+        padding: 0;
+    }
+
+    .image-clean>figcaption {
+        font-size: .9em;
+        text-align: right;
+    }
+
+    .image-grayscale {
+        background-color: white;
+        color: #666;
+    }
+
+    .image-grayscale img,
+    img.image-grayscale {
+        filter: grayscale(100%);
+    }
+
+    .embed-240p {
+        max-width: 426px;
+        max-height: 240px;
+        margin: 0 auto;
+    }
+
+    .embed-360p {
+        max-width: 640px;
+        max-height: 360px;
+        margin: 0 auto;
+    }
+
+    .embed-480p {
+        max-width: 854px;
+        max-height: 480px;
+        margin: 0 auto;
+    }
+
+    .embed-720p {
+        max-width: 1280px;
+        max-height: 720px;
+        margin: 0 auto;
+    }
+
+    .embed-1080p {
+        max-width: 1920px;
+        max-height: 1080px;
+        margin: 0 auto;
+    }
+
 
 
 
     /* =============================================== */
     /* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  position: relative;
-  z-index: 5;
-  top: 5vh;
-}
-
-.active, .dot:hover {
-  background-color: #666666;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
-.image-area{
-    display: contents;
-    width: 80vw;
-    max-height: 70vh;
-}
-
-@media screen and (max-width:480px) {
-    .project-info{
-        min-width: 100vw;
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        position: relative;
+        z-index: 5;
+        top: 5vh;
     }
-    
 
-    .project-discription{
-        width: 100%;
-        border: none;
+    .active,
+    .dot:hover {
+        background-color: #666666;
     }
-    
-}
 
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+
+    .image-area {
+        display: contents;
+        width: 80vw;
+        max-height: 70vh;
+    }
+
+    @media screen and (max-width:480px) {
+        .project-info {
+            min-width: 100vw;
+        }
+
+
+        .project-discription {
+            width: 100%;
+            font-size: small;
+            border: none;
+        }
+
+    }
 </style>
 
 <body>
@@ -430,45 +654,48 @@ var slideIndex = 0;
 
 
         <section class="wrapper">
-            <div><div class="project-image">
-                <div>
-                    <button class="btn-l" onclick="plusSlides(-1)">
-                        <h1> < </h1>
-                    </button>
+            <div>
+                <div class="project-image">
+                    <div>
+                        <button class="btn-l" onclick="plusSlides(-1)">
+                            <h1>
+                                < </h1>
+                        </button>
+                    </div>
+                    <div class="images-area">
+                        <div class="images-scroll">
+
+                            <div class="i1 fade"> <img src="{{name['imgs'][0]}}" alt="">
+                            </div>
+                            <div class="i1 fade"> <img src="{{name['imgs'][1]}}" alt="">
+                            </div>
+                            <div class="i1 fade"> <img src="{{name['imgs'][2] }}" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="btn-r" onclick="plusSlides(1)">
+                            <h1>></h1>
+                        </button>
+                    </div>
                 </div>
-                <div class="images-area">
-                <div class="images-scroll">
 
-                    <div class="i1 fade"> <img  src="{{name['imgs'][0]}}" alt="">
-                    </div>
-                    <div class="i1 fade"> <img  src="{{name['imgs'][1]}}" alt="">
-                    </div>
-                    <div class="i1 fade"> <img src="{{name['imgs'][2] }}" alt="">
-                    </div>
 
-                </div>
-            </div>
-
-                <div>
-                    <button class="btn-r" onclick="plusSlides(1)">
-                        <h1>></h1>
-                    </button>
-                </div></div>
-
-            
                 <!-- The dots/circles -->
-            <div style="    text-align: center;
+                <div style="    text-align: center;
             display: block;
             position: relative;
             z-index: 6;
             top: 7.5vh;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
             </div>
-                
-            </div>
-            
+
 
 
             <div class="project-info flex">
@@ -476,9 +703,15 @@ var slideIndex = 0;
                     <h1>{{name["name"]}}</h1>
                 </div>
                 <div class="project-discription" style="white-space: pre-line;">
-                    <p>  {{"  "+name["desc"]}}</p>
+                    
+                    <div id="1">
+                        {%block body%}{{name["desc"]|safe}}{%endblock%}
+
+                    </div>
+                   
                     <br>
-                    <span style="font-size:x-large; color:blue;text-decoration:underline;"><a href="{{name['link']}}">Project Link</a></span>
+                    <span style="font-size:x-large; color:blue;text-decoration:underline;"><a
+                            href="{{name['link']}}">Project Link</a></span>
                     <br><br>
                 </div>
 
@@ -510,7 +743,7 @@ var slideIndex = 0;
 
                 </div>
 
-                
+
 
                 <div class="used-langs-page">
                     <div class="heading">
@@ -537,7 +770,9 @@ var slideIndex = 0;
     <footer>
         <div class="footer-content">
             <h3>DynoCodes</h3>
-            <p style="text-align: left;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">DynoCodes is a blog website where you will find great Information on web design, Android, Machine
+            <p
+                style="text-align: left;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                DynoCodes is a blog website where you will find great Information on web design, Android, Machine
                 Learning, Ai and amazing projects. Here each project and concepts are beautifully described step by step
                 with the required source code.</p>
             <ul class="socials">

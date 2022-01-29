@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, request, render_template, redirect
 
+import FirebaseFiles.FirebaseOperator
 import FirebaseFiles.FirebaseOperator as fo
 import FirebaseFiles.pyrebaseApp as imgsaver
 
@@ -62,7 +63,7 @@ def details(name):
 @app.route('/')
 def start():
 
-    data = Operator.loadData()
+    data = FirebaseFiles.FirebaseOperator.FirebaseOperatorClass().loadData()
     blogs = Operator.load_blog()
     blogs_list = list()
     for i in blogs:

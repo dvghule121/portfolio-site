@@ -189,11 +189,13 @@
                     </div>
                     <div class="share-img-opt"><a href="\share\projects\{{data[i]['name']}}"><img src="https://purepng.com/public/uploads/large/share-icon-7nl.png" alt="" height="25px" width="25px"></a></div>
                     <div class="pr-name b">
-                        <a href="{{data[i]['link']}}">
+                        <a href="/projects/{{data[i]['name']}}">
                             <h1>{{data[i]['name']}}</h1>
                         </a>
                         <div class="hideable-content">
-                            <p>{{data[i]['desc']}}</p>
+                            <div class="p"> {{data[i]['desc']|safe}}</div>
+                            <button class="btn" style="height:fit-content;margin:1vh 0;background-color: transparent; color: blue;"> <a href="/projects/{{data[i]['name']}}">read more</a> </button>
+                           
                             <div class="links">
                                 <a href="{{data[i]['gitrepo']}}"><img
                                         src="{{url_for('static',filename='styles/images/Projects/git-icon.png')}}"
@@ -308,7 +310,8 @@
                             <h1>{{i['name']}}</h1>
                         </a>
                         <div class="hideable-content" style="visibility: visible;">
-                            <p>{{i['main_disk']}}</p>
+                           <div class="p">{{i['main_disk']}}</div>
+                          
                         </div>
                     </div>
                 </div>

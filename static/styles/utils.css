@@ -94,9 +94,8 @@
     transition-duration: 1s;
 }
 
-.pr-name p{
-    display: flexbox;
-    flex-grow: initial;
+.pr-name .p{
+    display: flex;
     padding: 0.225rem 2rem;
     font-size: smaller;
     visibility: hidden;
@@ -197,19 +196,21 @@
 
 
 
-.card-view:hover .pr-name p{
+.card-view:hover .pr-name .p{
     visibility: visible;
     max-height: 10px;
+    overflow: hidden;
     
-    overflow: auto;
+
     min-width: 250px;
+    max-width: 300px;
     
 
 }
 .pr-name a {
     margin-bottom: 0.5vh;
 }
-.pr-name p::-webkit-scrollbar {
+.pr-name .p::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
 
