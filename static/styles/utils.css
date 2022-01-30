@@ -439,7 +439,7 @@ footer {
 
     .used-langs-page-i{
         display: flex;
-        margin-top: 3vh;
+        margin: 3vh 0;
         background: rgba(255, 255, 255);
         width: 80vw;
         padding: 5vh 2vh;
@@ -463,19 +463,19 @@ footer {
     }
 
     .lang-card-i {
-        border-radius: 5px;
-        min-height: 15vh;
-        margin: 2vh 1vw;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20vw;
-        background: rgb(245, 219, 219);
-        color: rgb(0, 0, 0);
-        font-size: 1.5vw;
-        box-shadow: 15px 15px 10px 0 rgb(0 0 0 / 22%);
-        font-family:cursive, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+           border-radius: 5px;
+    height: 150px;
+    margin: 2vh 2vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    background: rgb(245, 219, 219);
+    color: rgb(0, 0, 0);
+    font-size: 1.5vw;
+    box-shadow: 15px 15px 10px 0 rgb(0 0 0 / 22%);
+    font-family: cursive, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: space-around;
     }
     .lang-card-i img {
         max-width: 20vw;
@@ -537,12 +537,11 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 25vw;
-    margin: 0 2.5565vw;
+    margin: 0 7.5565vw;
     }
 
-    .card iframe{
-        width:75vw;height: 75vh; margin: 2.5vw;
+    iframe{
+        width:75vw;height: 75vh; margin: 2.5vw -2.5vw;
         
     }
 
@@ -550,7 +549,7 @@ footer {
     .btn-l {
         display: flex;
         /* flex-direction: row; */
-        margin: 0 3vw;
+        margin: 0 1vw;
         border: none;
         font-family: cursive;
         color: rgb(255, 255, 255);
@@ -577,7 +576,7 @@ footer {
         justify-content: center;
         align-items: center;
         /* flex-direction: row; */
-        margin: 0 3vw;
+        margin: 0 1vw;
         border: none;
         font-family: cursive;
 
