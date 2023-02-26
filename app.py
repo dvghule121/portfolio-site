@@ -1,10 +1,11 @@
 import os
 
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template, redirect, jsonify
 
 import FirebaseFiles.FirebaseOperator
 import FirebaseFiles.FirebaseOperator as fo
 import FirebaseFiles.pyrebaseApp as imgsaver
+import SpeechToText
 
 try:
     Operator = fo.FirebaseOperatorClass()
@@ -14,17 +15,32 @@ except:
 
 app = Flask(__name__)
 
+
+@app.route('/speech-to-text', methods=['POST'])
+def speech_to_text():
+    # Get the bytearray of speech data from the request
+    audio_bytes = request.get_data()
+
+    # Convert the bytearray to text using the bytearray_to_text function
+    text = SpeechToText.bytearray_to_text(audio_bytes)
+
+    # Return the text as a JSON response
+    return jsonify({'text': text})
+
+
 @app.route('/cv')
 def mycv():
     return render_template('cv.html')
 
+
 @app.route('/share/<p_b>/<blog>')
-def share(p_b,blog):
+def share(p_b, blog):
     title = blog
     summary = 'Read this amazing blog by Dynocodes \n' + 'https://dynocodes.herokuapp.com/test/' + blog
     link = f'https://dynocodes.herokuapp.com/{p_b}/{blog}'
-    all_wrapped = { "summary":summary,"link":link, "title":title}
-    return render_template('share.html',cont = all_wrapped)
+    all_wrapped = {"summary": summary, "link": link, "title": title}
+    return render_template('share.html', cont=all_wrapped)
+
 
 @app.route('/form')
 def upload():
@@ -59,16 +75,13 @@ def details(name):
     return render_template("project-detail.html", name=project_dict)
 
 
-
 @app.route('/')
 def start():
-
     data = FirebaseFiles.FirebaseOperator.FirebaseOperatorClass().loadData()
     blogs = Operator.load_blog()
     blogs_list = list()
     for i in blogs:
         blogs_list.append(blogs[i])
-
 
     print(blogs_list)
     if data != None:
@@ -116,7 +129,6 @@ def add_project():
                 imgs_names.append("")
 
         lib_list = [lib_1, lib_2, lib_3, lib_4, lib_5, lib_6]
-
 
         imgtoFB = imgsaver.FBstorage()
         url_profile = imgtoFB.saveImage(img, img.filename)
@@ -203,18 +215,15 @@ def addBlog():
 
         img = request.form["img-link"]
 
-
-
-
         password = request.form["pass"]
 
         blog = {
-            "name":name,
-            "main_disk":main_disk,
-            "img":img,
-            "sub_topics":[
-                {"name":head_1,
-                 "para":disc_1},
+            "name": name,
+            "main_disk": main_disk,
+            "img": img,
+            "sub_topics": [
+                {"name": head_1,
+                 "para": disc_1},
                 {"name": head_2,
                  "para": disc_2},
                 {"name": head_3,
@@ -223,9 +232,8 @@ def addBlog():
                  "para": disc_4}
 
             ],
-            "topics":[lib_1,lib_2,lib_3,lib_4]
+            "topics": [lib_1, lib_2, lib_3, lib_4]
         }
-
 
         if password == "2006":
             Operator.add_blog(blog)
