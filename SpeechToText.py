@@ -13,6 +13,6 @@ def bytearray_to_text(audio_bytes):
         text = r.recognize_google(audio)
         return text
     except sr.UnknownValueError:
-        print("Speech recognition could not understand audio")
+        return ("Speech recognition could not understand audio")
     except sr.RequestError as e:
-        print(f"Could not request results from Google Speech Recognition service; {e}")
+        return (f"Could not request results from Google Speech Recognition service; {e}")
