@@ -1,3 +1,4 @@
+import json
 import os
 
 from flask import Flask, request, render_template, redirect, jsonify
@@ -64,6 +65,7 @@ def test(name):
 @app.route('/projects/<name>', methods=["GET", "POST"])
 def details(name):
     data = Operator.loadData()
+    print(data)
     itemList = data
     print(data)
 
@@ -273,6 +275,49 @@ def msgin():
         except Exception as e:
             msg = "cant add project  " + e
             return render_template("success.html", name=name, msg=msg)
+
+
+
+
+# # Your schedule data
+# with open("schedule.json", "r") as f:
+#     scheduleData = json.load(f)
+scheduleData = Operator.load_schedule()
+scheduleData = json.loads(scheduleData)
+
+# Generate schedule data with combined empty blocks
+combinedScheduleData = []
+currentEmptyBlock = None
+
+for hour_key, event in scheduleData.items():
+    # Convert the hour key to a string to ensure consistency
+    hour_str = str(hour_key)
+
+    if currentEmptyBlock and hour_str != currentEmptyBlock.get('end_time'):
+        # Add the combined empty block to the schedule
+        combinedScheduleData.append(currentEmptyBlock)
+        currentEmptyBlock = None
+
+    if hour_str in scheduleData:
+        # Add the scheduled event to the schedule
+        combinedScheduleData.append(scheduleData[hour_str])
+    else:
+        if not currentEmptyBlock:
+            # Start a new empty block
+            currentEmptyBlock = {
+                'title': 'Free Time',
+                'start_time': hour_str,
+                'end_time': None,
+                'tasks': []
+            }
+
+# If there's an empty block at the end of the day, add it
+if currentEmptyBlock:
+    combinedScheduleData.append(currentEmptyBlock)
+
+@app.route('/schedule')
+def schedule():
+    return render_template('schedule.html', scheduleData=combinedScheduleData)
 
 
 if __name__ == '__main__':

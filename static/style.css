@@ -1,0 +1,163 @@
+/* Custom Color Palette */
+:root {
+    --primary-color: #27374D !important; /* Main primary color for headings and buttons */
+    --secondary-color: #526D82 !important; /* Secondary color for subheadings and details */
+    --background-color: #9DB2BF !important; /* Background color for the entire app */
+    --card-background: #BFDDE6 !important; /* Card background color */
+    --card-border: #EDEDED !important; /* Card border color */
+    --text-color: #191825 !important; /* Main text color */
+    --task-check-bg: #526D82 !important; /* Checkbox background color when checked */
+    --task-check-border: #526D82 !important; /* Checkbox border color when checked */
+    --task-check-text: #EDEDED !important; /* Checkbox text color when checked */
+    --task-disabled-text: #ccc !important; /* Checkbox text color when disabled */
+}
+
+* {
+    margin: 0 ;
+    padding: 0 ;
+    font-family: monospace;
+    box-sizing: border-box ;
+}
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif !important;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) ;
+    margin: 0 ;
+    padding: 0 ;
+}
+
+header {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    text-align: start !important;
+    padding: 16px 24px !important;
+}
+
+h1 {
+    font-size: 28px !important;
+    font-weight: bold !important;
+    margin-bottom: 10px !important;
+}
+
+.container {
+    max-width: 800px !important;
+    margin: 20px auto !important;
+    padding: 20px !important;
+
+   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important; */
+    overflow: hidden !important;
+}
+
+/* Schedule styles */
+.column {
+    display: flex !important;
+    flex-direction: column !important;
+    align-content: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: transparent;
+}
+
+/* ... (previous CSS code) */
+
+/* Styles for the new card design */
+.card {
+    background-color: var(--card-background) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+
+    margin: 10px !important;
+    max-width: 600px !important;
+    transition: transform 0.2s !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card-body{
+padding: 24px !important;
+}
+
+.card-header {
+    background-color: var(--primary-color) !important;
+    padding: 24px !important;
+    border-radius: 8px 8px 0 0 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.card-title {
+    text-color: var(--text-color);
+    font-weight: bold !important;
+
+    font-size: 20px !important;
+}
+
+.card-text {
+
+    font-weight: 300;
+    font-size: 16px !important;
+    color: var(--secondary-color) !important;
+}
+
+.card-tasks {
+    padding: 10px !important;
+}
+
+.card-tasks h3 {
+    font-weight: bold !important;
+    color: #333 !important;
+    margin-bottom: 10px !important;
+}
+
+.card-tasks ul {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.card-tasks li {
+    margin-bottom: 5px !important;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    text-align: center !important;
+    padding: 10px 0 !important;
+    font-weight: bold !important;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: var(--primary-color) !important;
+    padding: 15px 0 !important;
+}
+
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+.list-group-item{
+    background: transparent !important;
+    padding: 12px;
+    border:0;
+}

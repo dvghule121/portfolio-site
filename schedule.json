@@ -1,0 +1,109 @@
+{
+  "8": {
+    "title": "Morning Routine",
+    "start_time": "8:00 AM",
+    "end_time": "9:15 AM",
+    "tasks": [
+      {
+        "name": "Wake Up",
+        "time": "8:00 AM - 8:15 AM"
+      },
+      {
+        "name": "Hygiene Time",
+        "time": "8:15 AM - 8:30 AM"
+      },
+      {
+        "name": "Get Ready",
+        "time": "8:30 AM - 8:45 AM"
+      },
+      {
+        "name": "Planning Time",
+        "time": "8:45 AM - 9:15 AM"
+      }
+    ]
+  },
+  "9": {
+    "title": "Internship",
+    "start_time": "9:15 AM",
+    "end_time": "12:15 PM",
+    "tasks": [
+      {
+        "name": "Morning Work Session",
+        "time": "9:15 AM - 12:15 PM"
+      }
+    ]
+  },
+  "12": {
+    "title": "Lunch Break",
+    "start_time": "12:15 PM",
+    "end_time": "1:45 PM",
+    "tasks": []
+  },
+  "13": {
+    "title": "Internship",
+    "start_time": "1:45 PM",
+    "end_time": "3:15 PM",
+    "tasks": [
+      {
+        "name": "Afternoon Work Session",
+        "time": "1:45 PM - 3:15 PM"
+      }
+    ]
+  },
+  "15": {
+    "title": "Afternoon Break",
+    "start_time": "3:15 PM",
+    "end_time": "3:30 PM",
+    "tasks": []
+  },
+  "18": {
+    "title": "Gym",
+    "start_time": "6:00 PM",
+    "end_time": "7:30 PM",
+    "tasks": []
+  },
+  "20": {
+    "title": "Dinner",
+    "start_time": "8:00 PM",
+    "end_time": "9:30 PM",
+    "tasks": []
+  },
+  "23": {
+    "title": "Sleep",
+    "start_time": "11:15 PM",
+    "end_time": "8:00 AM",
+    "tasks": []
+  },
+  "15.5": {
+    "title": "FlexiBlock 1",
+    "start_time": "3:30 PM",
+    "end_time": "6:00 PM",
+    "tasks": []
+  },
+  "21.5": {
+    "title": "Productive Block 1",
+    "start_time": "9:30 PM",
+    "end_time": "10:15 PM",
+    "tasks": [
+      {
+        "name": "Coding",
+        "time": "9:30 PM - 10:15 PM"
+      }
+    ]
+  },
+  "22.25": {
+    "title": "Break",
+    "start_time": "10:15 PM",
+    "end_time": "10:30 PM",
+    "tasks": []
+  },
+  "22.5": {
+    "title": "Productive Block 2",
+    "start_time": "10:30 PM",
+    "end_time": "11:15 PM",
+    "tasks": []
+  }
+}
+
+
+

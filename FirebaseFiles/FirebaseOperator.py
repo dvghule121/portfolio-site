@@ -113,6 +113,13 @@ class FirebaseOperatorClass:
         return self.blogs
 
 
+    def load_schedule(self):
+        schedule = db.reference("/schedule").get()
+        return schedule
+
+
+
+
 
     def addmsg(self,msg):
         self.ref = db.reference("/")
