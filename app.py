@@ -319,6 +319,14 @@ if currentEmptyBlock:
 def schedule():
     return render_template('schedule.html', scheduleData=combinedScheduleData)
 
+@app.route('/schedule/json')
+def schedule_json():
+    # Calculate and add the free blocks
+    with open("static/data/schedule.json", "r") as f :
+        schedule_data = json.loads(f)
+
+    return jsonify(schedule_data)
+
 
 if __name__ == '__main__':
     app.run(debug=False, port=8000)

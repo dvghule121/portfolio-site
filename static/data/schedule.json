@@ -1,0 +1,98 @@
+{
+  "08:00": [
+    {
+      "title": "Morning Routine",
+      "start_time": "08:00",
+      "end_time": "09:15",
+      "tasks": [
+        {
+          "name": "Wake Up",
+          "time": "08:00 - 08:15"
+        },
+        {
+          "name": "Get Ready",
+          "time": "08:30 - 08:45"
+        },
+        {
+          "name": "Planning Time",
+          "time": "08:45 - 09:15"
+        }
+      ]
+    }
+  ],
+  "09:15": [
+    {
+      "title": "Internship",
+      "start_time": "09:15",
+      "end_time": "15:15",
+      "tasks": [
+        {
+          "name": "Morning Work Session",
+          "time": "09:15 - 12:15"
+        },
+        {
+          "name": "Lunch Break",
+          "time": "12:15 - 13:15"
+        },
+        {
+          "name": "After lunch work session",
+          "time": "13:15 - 15:15"
+        }
+      ]
+    }
+  ],
+  "15:15": [
+    {
+      "title": "Afternoon Break",
+      "start_time": "15:15",
+      "end_time": "15:30",
+      "tasks": []
+    }
+  ],
+  "18:00": [
+    {
+      "title": "Gym",
+      "start_time": "18:00",
+      "end_time": "19:30",
+      "tasks": []
+    }
+  ],
+  "20:00": [
+    {
+      "title": "Dinner",
+      "start_time": "20:00",
+      "end_time": "21:30",
+      "tasks": []
+    }
+  ],
+  "23:15": [
+    {
+      "title": "Sleep",
+      "start_time": "23:15",
+      "end_time": "08:00",
+      "tasks": []
+    }
+  ],
+
+  "21:30": [
+    {
+      "title": "Productive Block 1",
+      "start_time": "21:30",
+      "end_time": "22:15",
+      "tasks": [
+        {
+          "name": "Coding",
+          "time": "21:30 - 22:15"
+        }
+      ]
+    }
+  ],
+  "22:30": [
+    {
+      "title": "Productive Block 2",
+      "start_time": "22:30",
+      "end_time": "23:15",
+      "tasks": []
+    }
+  ]
+}
