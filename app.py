@@ -327,7 +327,7 @@ with open("static/data/schedule.json", "r") as f :
 @app.route('/schedule/json')
 def schedule_json():
 
-    return schedule_data
+    return jsonify(schedule_data)
 
 
 if __name__ == '__main__':
