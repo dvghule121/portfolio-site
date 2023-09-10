@@ -319,11 +319,13 @@ if currentEmptyBlock:
 def schedule():
     return render_template('schedule.html', scheduleData=combinedScheduleData)
 
+
+# Calculate and add the free blocks
+with open("static/data/schedule.json", "r") as f :
+    schedule_data = json.load(f)
+
 @app.route('/schedule/json')
 def schedule_json():
-    # Calculate and add the free blocks
-    with open("static/data/schedule.json", "r") as f :
-        schedule_data = json.loads(f)
 
     return schedule_data
 
