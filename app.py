@@ -3,10 +3,13 @@ import os
 
 from flask import Flask, request, render_template, redirect, jsonify
 
+
 import FirebaseFiles.FirebaseOperator
 import FirebaseFiles.FirebaseOperator as fo
 import FirebaseFiles.pyrebaseApp as imgsaver
 import SpeechToText
+from internshala import InternshipExtractor
+
 
 try:
     Operator = fo.FirebaseOperatorClass()
@@ -16,7 +19,7 @@ except:
 
 app = Flask(__name__)
 
-
+internshala_extractor = InternshipExtractor()
 @app.route('/speech-to-text', methods=['POST'])
 def speech_to_text():
     # Get the bytearray of speech data from the request
@@ -328,6 +331,14 @@ with open("static/data/schedule.json", "r") as f :
 def schedule_json():
 
     return jsonify(schedule_data)
+
+
+@app.route("/internships/<string:sortedByDate>/<string:sortedByStipend>")
+def get_internships(sortedByDate, sortedByStipend):
+    sorted_by_date = sortedByDate.lower() == 'true'
+    sorted_by_stipend = sortedByStipend.lower() == 'true'
+    return jsonify(internshala_extractor.get_internships(sorted_by_date, sorted_by_stipend))
+
 
 
 if __name__ == '__main__':
