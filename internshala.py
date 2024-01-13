@@ -9,6 +9,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 class InternshipExtractor:
     def __init__(self):
         pass
@@ -73,7 +74,8 @@ class InternshipExtractor:
         try:
             soup = BeautifulSoup(html_text, 'html.parser')
             internship_containers = soup.find_all("div", {"class": "individual_internship"})
-            data = [self.extract_internship_data(container, container.get("internshipid")) for container in internship_containers]
+            data = [self.extract_internship_data(container, container.get("internshipid")) for container in
+                    internship_containers]
             return [item for item in data if item]
         except Exception as e:
             logger.exception(f"An error occurred while extracting internships: {str(e)}")
@@ -95,11 +97,13 @@ class InternshipExtractor:
 
     def filter_jobs_by_freshness(self, job_details, max_days):
         today = datetime.datetime.now()
-        return [job for job in job_details if (today - datetime.datetime.strptime(job['posted_time'], '%Y-%m-%d')).days <= max_days]
+        return [job for job in job_details if
+                (today - datetime.datetime.strptime(job['posted_time'], '%Y-%m-%d')).days <= max_days]
 
     def delete_old_entries(self, job_details, max_days):
         today = datetime.datetime.now()
-        return [job for job in job_details if (today - datetime.datetime.strptime(job['posted_time'], '%Y-%m-%d')).days <= max_days]
+        return [job for job in job_details if
+                (today - datetime.datetime.strptime(job['posted_time'], '%Y-%m-%d')).days <= max_days]
 
     def update_and_save_jobs(self, max_days=30, sort=False):
         job_details = self.load_jobs_from_json()
@@ -129,15 +133,14 @@ class InternshipExtractor:
 
         return sorted(internships, key=lambda internship: internship["stipend"][1], reverse=True)
 
-    def getInternshipList(self):
-        target_url = f'https://internshala.com/internships/android,android-app-development-internship/'
+    def getInternshipList(self, role="android, android - app - development - internship"):
+        target_url = f'https://internshala.com/internships/{role}'
         response = requests.get(target_url)
         internships = self.extract_internships_from_html(response.text)
         return internships
 
     def sortByDate(self, internships):
         return sorted(internships, key=lambda internship: internship["posted_time"], reverse=True)
-
 
     def parse_salary_string(self, salary_string):
         salary_string = salary_string.replace(",", "")
@@ -156,7 +159,7 @@ class InternshipExtractor:
 
         return None
 
-    def get_internships(self, sortDate = True, sortStipend = True):
+    def get_internships(self, sortDate=True, sortStipend=True):
         internships = self.getInternshipList()
         if (sortStipend):
             internships = self.sortByStipend(internships)
@@ -164,7 +167,13 @@ class InternshipExtractor:
         if (sortDate): internships = self.sortByDate(internships)
         return internships
 
+    def get_internships_by_role(self, role, sortDate=True, sortStipend=True):
+        internships = self.getInternshipList(role)
+        if (sortStipend):
+            internships = self.sortByStipend(internships)
 
+        if (sortDate): internships = self.sortByDate(internships)
+        return internships
 
 
 if __name__ == "__main__":
@@ -172,4 +181,3 @@ if __name__ == "__main__":
     # extractor.update_and_save_jobs()
 
     internship = extractor.load_jobs_from_json()
-

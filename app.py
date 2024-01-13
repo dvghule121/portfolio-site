@@ -341,5 +341,13 @@ def get_internships(sortedByDate, sortedByStipend):
 
 
 
+@app.route("/internships/<string: internship>/<string:sortedByDate>/<string:sortedByStipend>")
+def get_internships_by_role(internship, sortedByDate, sortedByStipend):
+    sorted_by_date = sortedByDate.lower() == 'true'
+    sorted_by_stipend = sortedByStipend.lower() == 'true'
+    return jsonify(internshala_extractor.get_internships_by_role(internship, sorted_by_date, sorted_by_stipend))
+
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
