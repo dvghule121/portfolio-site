@@ -341,7 +341,7 @@ def get_internships(sortedByDate, sortedByStipend):
 
 
 
-@app.route("/internships/<string: internship>/<string:sortedByDate>/<string:sortedByStipend>")
+@app.route("/internships/<string:internship>/<string:sortedByDate>/<string:sortedByStipend>")
 def get_internships_by_role(internship, sortedByDate, sortedByStipend):
     sorted_by_date = sortedByDate.lower() == 'true'
     sorted_by_stipend = sortedByStipend.lower() == 'true'
